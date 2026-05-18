@@ -78,11 +78,11 @@ export function Hero() {
         <div className="gold-divider mx-auto my-8 animate-fade-up delay-200" />
 
         <p className="font-serif italic text-xl md:text-2xl text-[#f6eadb] max-w-2xl mx-auto text-balance animate-fade-up delay-200">
-          Des souvenirs instantanés pour vos plus beaux moments.
+          Des souvenirs instantanés pour vos plus beaux événements.
         </p>
 
         <p className="mt-6 text-[#f6eadb] max-w-xl mx-auto text-sm md:text-base animate-fade-up delay-300">
-          Mariages · Anniversaires · Baptêmes · Événements privés
+          Mariages · Baptêmes · Baby showers · Anniversaires · Événements privés · Soirées d’entreprise
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center animate-fade-up delay-500">

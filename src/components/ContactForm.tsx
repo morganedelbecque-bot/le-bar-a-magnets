@@ -4,9 +4,12 @@ import chalkboard from "@/assets/chalkboard.jpg";
 
 const eventTypes = [
   "Mariage",
-  "Anniversaire",
   "Baptême",
+  "Baby shower",
+  "Anniversaire",
   "Événement privé",
+  "Événement professionnel",
+  "Soirée d’entreprise",
   "Autre",
 ];
 

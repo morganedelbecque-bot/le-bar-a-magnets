@@ -39,6 +39,12 @@ export function Footer() {
               </li>
 
               <li>
+                <a href="/animation-mariage-toulouse" className="hover:text-[#f3e7dc] transition-colors duration-200">
+                  Animation mariage Toulouse
+                </a>
+              </li>
+
+              <li>
                 <a href="#contact" className="hover:text-[#f3e7dc] transition-colors duration-200">
                   Devis
                 </a>
@@ -59,7 +65,7 @@ export function Footer() {
             </a>
 
             <p className="text-sm text-[#d8c3b5]/90 mt-3">
-              Mariages · Anniversaires · Baptêmes · Événements privés
+              Mariages · Baptêmes · Baby showers · Anniversaires · Événements privés · Soirées d’entreprise
             </p>
           </div>
         </div>
