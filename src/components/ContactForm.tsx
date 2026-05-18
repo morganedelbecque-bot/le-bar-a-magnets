@@ -28,7 +28,7 @@ export function ContactForm() {
 
     try {
       const res = await fetch(
-        "https://formsubmit.co/ajax/lebaramagnets@gmail.com",
+        "https://formsubmit.co/ajax/lebaramagnets@outlook.com",
         {
           method: "POST",
           headers: { Accept: "application/json" },
@@ -92,10 +92,10 @@ export function ContactForm() {
                 <div className="font-medium">Email</div>
 
                 <a
-                  href="mailto:lebaramagnets@gmail.com"
+                  href="mailto:lebaramagnets@outlook.com"
                   className="text-foreground/70 hover:text-primary"
                 >
-                  lebaramagnets@gmail.com
+                  lebaramagnets@outlook.com
                 </a>
               </div>
             </div>
@@ -227,7 +227,7 @@ export function ContactForm() {
             {status === "error" && (
               <p className="text-center text-sm text-destructive animate-fade-in">
                 Une erreur est survenue. Merci d'écrire directement à
-                lebaramagnets@gmail.com.
+                lebaramagnets@outlook.com.
               </p>
             )}
           </form>

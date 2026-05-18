@@ -58,10 +58,10 @@ export function Footer() {
             </div>
 
             <a
-              href="mailto:lebaramagnets@gmail.com"
+              href="mailto:lebaramagnets@outlook.com"
               className="text-sm text-[#d8c3b5] hover:text-[#f3e7dc] block transition-colors duration-200"
             >
-              lebaramagnets@gmail.com
+              lebaramagnets@outlook.com
             </a>
 
             <p className="text-sm text-[#d8c3b5]/90 mt-3">
