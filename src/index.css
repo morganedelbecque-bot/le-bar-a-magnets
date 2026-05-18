@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+:root {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-blush: var(--blush);
+  --color-cream: var(--cream);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.985 0.008 60);
+  --foreground: oklch(0.28 0.02 30);
+
+  --cream: oklch(0.97 0.015 75);
+  --blush: oklch(0.86 0.045 20);
+  --gold: oklch(0.74 0.12 80);
+  --gold-soft: oklch(0.85 0.07 80);
+
+  --card: oklch(0.99 0.006 70);
+  --card-foreground: oklch(0.28 0.02 30);
+  --popover: oklch(0.99 0.006 70);
+  --popover-foreground: oklch(0.28 0.02 30);
+
+  --primary: oklch(0.62 0.09 25);
+  --primary-foreground: oklch(0.985 0.008 60);
+
+  --secondary: oklch(0.92 0.025 30);
+  --secondary-foreground: oklch(0.28 0.02 30);
+
+  --muted: oklch(0.94 0.015 60);
+  --muted-foreground: oklch(0.48 0.02 30);
+
+  --accent: oklch(0.86 0.045 20);
+  --accent-foreground: oklch(0.28 0.02 30);
+
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.985 0.008 60);
+
+  --border: oklch(0.9 0.02 50);
+  --input: oklch(0.92 0.018 50);
+  --ring: oklch(0.74 0.12 80);
+
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-soft: 0 24px 80px -30px oklch(0.6 0.08 25 / 0.18);
+  --shadow-gold: 0 10px 40px -18px oklch(0.74 0.12 80 / 0.32);
+  --gradient-warm: linear-gradient(135deg, oklch(0.97 0.02 60), oklch(0.92 0.04 30));
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.1 80), oklch(0.7 0.13 70));
+  --footer: oklch(0.13 0.08 32);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .bg-footer {
+    background-color: var(--footer);
+  }
+
+  .bg-blush {
+    background-color: var(--blush);
+  }
+
+  .bg-cream {
+    background-color: var(--cream);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slow-zoom {
+    from {
+      transform: scale(1.05);
+    }
+
+    to {
+      transform: scale(1.15);
+    }
+  }
+
+  @keyframes shimmer {
+    0%, 100% {
+      opacity: 0.6;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.2s ease-out both;
+  }
+
+  .animate-slow-zoom {
+    animation: slow-zoom 18s ease-out infinite alternate;
+  }
+
+  .hero-petal {
+    position: absolute;
+    top: -10%;
+    border-radius: 70% 30% 70% 30%;
+    opacity: 0.72;
+    filter: blur(0.2px);
+    box-shadow: 0 5px 14px rgba(90, 35, 45, 0.22);
+    animation: petal-fall 16s linear infinite, petal-sway 7.4s ease-in-out infinite;
+    animation-iteration-count: infinite;
+    will-change: top, transform, opacity;
+  }
+
+  .hero-petal--1 {
+    width: 10px;
+    height: 16px;
+    left: 6%;
+    animation-duration: 14s, 6.5s;
+    animation-delay: 0s, 0s;
+    --petal-rotation: 25deg;
+  }
+
+  .hero-petal--2 {
+    width: 12px;
+    height: 18px;
+    left: 18%;
+    animation-duration: 16s, 7.2s;
+    animation-delay: 1.6s, 0.8s;
+    --petal-rotation: 12deg;
+  }
+
+  .hero-petal--3 {
+    width: 11px;
+    height: 20px;
+    left: 28%;
+    animation-duration: 15s, 6.8s;
+    animation-delay: 0.8s, 0.4s;
+    --petal-rotation: -8deg;
+  }
+
+  .hero-petal--4 {
+    width: 9px;
+    height: 15px;
+    left: 74%;
+    animation-duration: 17s, 6.1s;
+    animation-delay: 0.5s, 1.2s;
+    --petal-rotation: 18deg;
+  }
+
+  .hero-petal--5 {
+    width: 13px;
+    height: 22px;
+    left: 86%;
+    animation-duration: 18s, 6.7s;
+    animation-delay: 1.2s, 0.5s;
+    --petal-rotation: -12deg;
+  }
+
+  .hero-petal--6 {
+    width: 8px;
+    height: 14px;
+    left: 94%;
+    animation-duration: 13s, 5.8s;
+    animation-delay: 2.2s, 1s;
+    --petal-rotation: 30deg;
+  }
+
+  @keyframes petal-fall {
+    0% {
+      top: -12%;
+      opacity: 0.18;
+    }
+    40% {
+      opacity: 0.72;
+    }
+    100% {
+      top: 112vh;
+      opacity: 0.08;
+    }
+  }
+
+  @keyframes petal-sway {
+    0%, 100% {
+      transform: translateX(0) rotate(var(--petal-rotation));
+    }
+    25% {
+      transform: translateX(5px) rotate(calc(var(--petal-rotation) + 6deg));
+    }
+    50% {
+      transform: translateX(8px) rotate(calc(var(--petal-rotation) + 10deg));
+    }
+    75% {
+      transform: translateX(4px) rotate(calc(var(--petal-rotation) + 4deg));
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .delay-100 {
+    animation-delay: .1s;
+  }
+
+  .delay-200 {
+    animation-delay: .2s;
+  }
+
+  .delay-300 {
+    animation-delay: .3s;
+  }
+
+  .delay-500 {
+    animation-delay: .5s;
+  }
+}

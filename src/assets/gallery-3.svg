@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="h" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7e8df" />
+      <stop offset="100%" stop-color="#f5eef2" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="40" fill="url(#h)" />
+  <path d="M160 180c180-80 370-40 430 120 60 160-10 260-110 290" fill="none" stroke="#d2a978" stroke-width="30" stroke-linecap="round" opacity="0.88" />
+  <circle cx="140" cy="470" r="42" fill="#fff" opacity="0.85" />
+  <circle cx="680" cy="110" r="48" fill="#fff" opacity="0.85" />
+  <text x="50%" y="80%" text-anchor="middle" fill="#8e5d57" font-size="42" font-family="sans-serif">Ambiance mariage</text>
+</svg>
