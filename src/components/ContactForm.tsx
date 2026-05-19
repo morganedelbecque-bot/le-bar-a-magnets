@@ -131,7 +131,7 @@ export function ContactForm() {
               tabIndex={-1}
               autoComplete="off"
             />
-
+            <input type="hidden" name="_captcha" value="false" />
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Prénom" name="prenom" required />
               <Field label="Nom" name="nom" required />
