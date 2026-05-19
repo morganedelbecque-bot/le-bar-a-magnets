@@ -8,7 +8,11 @@ import { ContactForm } from './components/ContactForm'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
-import { AnimationPlaceholderPage } from './pages/AnimationPlaceholderPage'
+import AnimationBaptemeToulouse from './pages/AnimationBaptemeToulouse'
+import AnimationAnniversaireToulouse from './pages/AnimationAnniversaireToulouse'
+import AnimationBabyShowerToulouse from './pages/AnimationBabyShowerToulouse'
+import AnimationEvenementielleToulouse from './pages/AnimationEvenementielleToulouse'
+import BarAMagnetsOccitanie from './pages/BarAMagnetsOccitanie'
 
 const normalizePath = (pathname: string) => pathname.replace(/\/+$|^\/\/$/g, '/')
 
@@ -19,25 +23,23 @@ const routeDefinitions = [
   },
   {
     path: '/animation-bapteme-toulouse',
-    element: (
-      <AnimationPlaceholderPage
-        title="Animation baptême Toulouse"
-        subtitle="Bientôt disponible"
-        description="Découvrez notre univers premium pour baptêmes à Toulouse, avec des animations souvenirs à la fois élégantes et personnalisées."
-        eventTypes={['Baptême', 'Mariage', 'Anniversaire', 'Baby shower', 'Événement privé']}
-      />
-    ),
+    element: <AnimationBaptemeToulouse />,
   },
   {
     path: '/animation-anniversaire-toulouse',
-    element: (
-      <AnimationPlaceholderPage
-        title="Animation anniversaire Toulouse"
-        subtitle="Bientôt disponible"
-        description="Un concept unique pour anniversaires et fêtes privées à Toulouse, avec un bar à magnets haut de gamme et des souvenirs instantanés."
-        eventTypes={['Anniversaire', 'Baby shower', 'Événement privé', 'Soirée d’entreprise']}
-      />
-    ),
+    element: <AnimationAnniversaireToulouse />,
+  },
+  {
+    path: '/animation-baby-shower-toulouse',
+    element: <AnimationBabyShowerToulouse />,
+  },
+  {
+    path: '/animation-evenementielle-toulouse',
+    element: <AnimationEvenementielleToulouse />,
+  },
+  {
+    path: '/bar-a-magnets-occitanie',
+    element: <BarAMagnetsOccitanie />,
   },
 ]
 

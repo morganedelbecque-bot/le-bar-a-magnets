@@ -45,6 +45,26 @@ export function Footer() {
               </li>
 
               <li>
+                <a href="/animation-bapteme-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baptême Toulouse">Animation baptême Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/animation-anniversaire-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation anniversaire Toulouse">Animation anniversaire Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/animation-baby-shower-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baby shower Toulouse">Animation baby shower Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/animation-evenementielle-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation événementielle Toulouse">Animation événementielle Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/bar-a-magnets-occitanie" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Occitanie">Bar à magnets Occitanie</a>
+              </li>
+
+              <li>
                 <a href="#contact" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Devis">
                   Devis
                 </a>
