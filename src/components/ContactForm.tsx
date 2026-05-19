@@ -92,20 +92,8 @@ export function ContactForm() {
             />
             <input
               type="hidden"
-              name="_subject"
+              name="subject"
               value="Nouvelle demande de devis - Le Bar à Magnets"
-            />
-
-            <input type="hidden" name="_template" value="table" />
-
-            <input type="hidden" name="_captcha" value="false" />
-
-            <input
-              type="text"
-              name="_honey"
-              style={{ display: "none" }}
-              tabIndex={-1}
-              autoComplete="off"
             />
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Prénom" name="prenom" required />
