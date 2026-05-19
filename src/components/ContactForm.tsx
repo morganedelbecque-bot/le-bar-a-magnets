@@ -1,5 +1,3 @@
-import { useState } from "react";
-import type { FormEvent } from "react";
 import chalkboard from "@/assets/chalkboard.jpg";
 
 const eventTypes = [
@@ -14,14 +12,6 @@ const eventTypes = [
 ];
 
 export function ContactForm() {
-  const [status, setStatus] = useState<
-    "idle" | "sending" | "sent" | "error"
-  >("idle");
-
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    setStatus("sending");
-  }
-
   return (
     <section
       id="contact"
@@ -93,7 +83,6 @@ export function ContactForm() {
           <form
             action="https://formsubmit.co/lebaramagnets@outlook.com"
             method="POST"
-            onSubmit={onSubmit}
             className="space-y-6"
           >
             <input
@@ -104,6 +93,8 @@ export function ContactForm() {
 
             <input type="hidden" name="_template" value="table" />
 
+            <input type="hidden" name="_captcha" value="false" />
+
             <input
               type="text"
               name="_honey"
@@ -111,7 +102,6 @@ export function ContactForm() {
               tabIndex={-1}
               autoComplete="off"
             />
-            <input type="hidden" name="_captcha" value="false" />
             <div className="grid sm:grid-cols-2 gap-5">
               <Field label="Prénom" name="prenom" required />
               <Field label="Nom" name="nom" required />
@@ -189,27 +179,10 @@ export function ContactForm() {
 
             <button
               type="submit"
-              disabled={status === "sending"}
-              className="w-full mt-4 px-8 py-4 rounded-full gradient-gold text-foreground text-sm uppercase tracking-[0.25em] shadow-gold hover:shadow-soft transition-all duration-500 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full mt-4 px-8 py-4 rounded-full gradient-gold text-foreground text-sm uppercase tracking-[0.25em] shadow-gold hover:shadow-soft transition-all duration-500 hover:-translate-y-0.5"
             >
-              {status === "sending"
-                ? "Envoi en cours…"
-                : "Envoyer ma demande"}
+              Envoyer ma demande
             </button>
-
-            {status === "sent" && (
-              <p className="text-center text-sm text-primary animate-fade-in">
-                ✦ Merci ! Votre demande a bien été envoyée. Nous revenons vers
-                vous très vite.
-              </p>
-            )}
-
-            {status === "error" && (
-              <p className="text-center text-sm text-destructive animate-fade-in">
-                Une erreur est survenue. Merci d'écrire directement à
-                lebaramagnets@outlook.com.
-              </p>
-            )}
           </form>
         </div>
       </div>
