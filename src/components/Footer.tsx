@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-[#3a2623] to-[#422b27] text-[#f3e7dc] py-16 px-6 relative z-40">
+    <footer className="bg-gradient-to-r from-[#3a2623] to-[#422b27] text-[#f3e7dc] py-16 px-6 relative z-60">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
           <div>
@@ -21,31 +21,31 @@ export function Footer() {
 
             <ul className="space-y-2 text-sm text-[#d8c3b5]">
               <li>
-                <a href="#concept" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-50 pointer-events-auto">
+                <a href="#concept" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Concept">
                   Concept
                 </a>
               </li>
 
               <li>
-                <a href="#etapes" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-50 pointer-events-auto">
+                <a href="#etapes" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Étapes">
                   Étapes
                 </a>
               </li>
 
               <li>
-                <a href="#galerie" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-50 pointer-events-auto">
+                <a href="#galerie" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Galerie">
                   Galerie
                 </a>
               </li>
 
               <li>
-                <a href="/animation-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-50 pointer-events-auto">
+                <a href="/animation-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation mariage Toulouse">
                   Animation mariage Toulouse
                 </a>
               </li>
 
               <li>
-                <a href="#contact" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-50 pointer-events-auto">
+                <a href="#contact" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Devis">
                   Devis
                 </a>
               </li>
@@ -59,7 +59,8 @@ export function Footer() {
 
             <a
               href="mailto:lebaramagnets@outlook.com"
-              className="text-sm text-[#d8c3b5] hover:text-[#f3e7dc] block transition-colors duration-200 py-2 relative z-50 pointer-events-auto"
+              className="text-sm text-[#d8c3b5] hover:text-[#f3e7dc] block transition-colors duration-200 py-2 relative z-70 pointer-events-auto"
+              aria-label="Email Le Bar à Magnets"
             >
               lebaramagnets@outlook.com
             </a>
