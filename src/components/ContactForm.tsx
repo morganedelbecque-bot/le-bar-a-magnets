@@ -21,6 +21,15 @@ export function ContactForm() {
     setStatus("sending");
 
     const form = e.currentTarget;
+
+    // ensure native HTML validation runs (mobile friendly)
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      setStatus("idle");
+      console.warn("ContactForm: validation failed");
+      return;
+    }
+
     const data = new FormData(form);
 
     const access_key = String(data.get("access_key") || "");
@@ -95,22 +104,33 @@ export function ContactForm() {
     };
 
     try {
+      console.log("ContactForm: sending cleanData", { cleanData });
+
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cleanData),
       });
 
-      const json = await res.json();
+      let json: any = null;
+      try {
+        json = await res.json();
+      } catch (e) {
+        console.warn("ContactForm: response is not valid JSON", e);
+      }
 
-      if (res.ok && json.success) {
+      console.log("ContactForm: web3forms response", { status: res.status, ok: res.ok, json });
+
+      if (res.ok && json && json.success) {
         setStatus("sent");
         form.reset();
       } else {
         setStatus("error");
+        console.error("ContactForm: Web3Forms returned error", { status: res.status, json });
       }
     } catch (err) {
       setStatus("error");
+      console.error("ContactForm: network error sending to Web3Forms", err);
     }
   }
 
@@ -202,7 +222,7 @@ export function ContactForm() {
               <textarea name="message" rows={4} placeholder="Parlez-nous de votre événement…" className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-2.5 text-sm transition-colors resize-none" />
             </div>
 
-            <button type="submit" disabled={status === "sending"} className="w-full mt-4 px-8 py-4 rounded-full gradient-gold text-foreground text-sm uppercase tracking-[0.25em] shadow-gold hover:shadow-soft transition-all duration-500 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed">
+            <button type="submit" disabled={status === "sending"} className="w-full mt-4 px-8 py-4 rounded-full gradient-gold text-foreground text-sm uppercase tracking-[0.25em] shadow-gold hover:shadow-soft transition-all duration-500 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed relative z-30 pointer-events-auto touch-auto">
               {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}
             </button>
 
