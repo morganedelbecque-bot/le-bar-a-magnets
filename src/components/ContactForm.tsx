@@ -18,37 +18,8 @@ export function ContactForm() {
     "idle" | "sending" | "sent" | "error"
   >("idle");
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     setStatus("sending");
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const body = new URLSearchParams();
-
-    data.forEach((value, key) => {
-      body.append(key, String(value));
-    });
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method || "POST",
-        headers: { Accept: "application/json" },
-        body,
-      });
-
-      const result = await response.json();
-
-      if (!response.ok || result.success !== true) {
-        throw new Error(result.message || "FormSubmit error");
-      }
-
-      setStatus("sent");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
   }
 
   return (
@@ -120,7 +91,7 @@ export function ContactForm() {
 
         <div className="bg-white/95 p-10 md:p-12 rounded-[32px] shadow-soft border border-border/20 backdrop-blur-sm">
           <form
-            action="https://formsubmit.co/ajax/lebaramagnets@outlook.com"
+            action="https://formsubmit.co/lebaramagnets@outlook.com"
             method="POST"
             onSubmit={onSubmit}
             className="space-y-6"
@@ -128,7 +99,7 @@ export function ContactForm() {
             <input
               type="hidden"
               name="_subject"
-              value="Nouvelle demande de devis – Le Bar à Magnets"
+              value="Nouvelle demande de devis - Le Bar à Magnets"
             />
 
             <input type="hidden" name="_template" value="table" />
