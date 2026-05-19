@@ -28,7 +28,7 @@ export default function GiftOrder() {
           
 
           <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=lebaramagnets@outlook.com&su=Commande%20magnets%20personnalis%C3%A9s&body=Bonjour%2C%20je%20souhaite%20obtenir%20des%20informations%20pour%20une%20commande%20de%20magnets%20personnalis%C3%A9s."
+  href="mailto:lebaramagnets@outlook.com?subject=Commande%20magnets%20cadeaux%20invit%C3%A9s&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20des%20informations%20pour%20une%20commande%20de%20magnets%20personnalis%C3%A9s.%0A%0ANom%20%3A%0ADate%20%3A%0AQuantit%C3%A9%20%3A%0A%0AMerci%20%21"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-block rounded-full bg-[#c89b6d] px-8 py-4 text-white shadow-md hover:opacity-90 transition"
