@@ -1,33 +1,21 @@
 import chalkboard from "@/assets/chalkboard.jpg";
 
 const eventTypes = [
-  "Mariage",
-  "Baptême",
-  "Baby shower",
-  "Anniversaire",
-  "Événement privé",
-  "Événement professionnel",
-  "Soirée d’entreprise",
-  "Autre",
-];
-
-export function ContactForm() {
-  return (
-    <section
-      id="contact"
-      className="relative py-28 md:py-40 overflow-hidden bg-cream"
-    >
-      <div className="absolute top-0 left-0 w-1/2 h-full hidden lg:block">
-        <img
-          src={chalkboard}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f8f1ec]/65 to-[#f8f1ec]" />
-        <div className="absolute inset-0 bg-[#f8f1ec]/20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f8f1ec]/10 via-transparent to-[#f8f1ec]/30" />
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            className="space-y-6"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="340740a0-3b6b-4e5a-8894-945f17ee94e6"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="Nouvelle demande de devis - Le Bar à Magnets"
+            />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-16">
