@@ -25,23 +25,27 @@ export function ContactForm() {
 
     const form = e.currentTarget;
     const data = new FormData(form);
+    const body = new URLSearchParams();
+
+    data.forEach((value, key) => {
+      body.append(key, String(value));
+    });
 
     try {
-      const res = await fetch(
-        "https://formsubmit.co/ajax/lebaramagnets@outlook.com",
-        {
-          method: "POST",
-          headers: { Accept: "application/json" },
-          body: data,
-        }
-      );
+      const response = await fetch(form.action, {
+        method: form.method || "POST",
+        headers: { Accept: "application/json" },
+        body,
+      });
 
-      if (res.ok) {
-        setStatus("sent");
-        form.reset();
-      } else {
-        setStatus("error");
+      const result = await response.json();
+
+      if (!response.ok || result.success !== true) {
+        throw new Error(result.message || "FormSubmit error");
       }
+
+      setStatus("sent");
+      form.reset();
     } catch {
       setStatus("error");
     }
@@ -115,7 +119,12 @@ export function ContactForm() {
         </div>
 
         <div className="bg-white/95 p-10 md:p-12 rounded-[32px] shadow-soft border border-border/20 backdrop-blur-sm">
-          <form onSubmit={onSubmit} className="space-y-6">
+          <form
+            action="https://formsubmit.co/ajax/lebaramagnets@outlook.com"
+            method="POST"
+            onSubmit={onSubmit}
+            className="space-y-6"
+          >
             <input
               type="hidden"
               name="_subject"
