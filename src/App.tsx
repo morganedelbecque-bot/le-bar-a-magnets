@@ -5,6 +5,7 @@ import { Gallery } from './components/Gallery'
 import { WhyUs } from './components/WhyUs'
 import { FAQ } from './components/FAQ'
 import { ContactForm } from './components/ContactForm'
+import GiftOrder from './components/GiftOrder'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
@@ -60,6 +61,7 @@ export function App() {
           <Gallery />
           <WhyUs />
           <FAQ />
+          <GiftOrder />
           <ContactForm />
         </>
       )}
