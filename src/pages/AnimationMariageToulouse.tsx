@@ -3,7 +3,7 @@ import heroImg from '@/assets/hero-stand.jpg'
 import { Gallery } from '@/components/Gallery'
 import { ContactForm } from '@/components/ContactForm'
 
-export function AnimationMariageToulousePage() {
+export default function AnimationMariageToulouse() {
   useEffect(() => {
     document.title = 'Animation mariage Toulouse | Le Bar à Magnets'
     window.scrollTo(0, 0)

@@ -7,7 +7,7 @@ import { FAQ } from './components/FAQ'
 import { ContactForm } from './components/ContactForm'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
-import { AnimationMariageToulousePage } from './pages/AnimationMariageToulouse'
+import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
 import { AnimationPlaceholderPage } from './pages/AnimationPlaceholderPage'
 
 const normalizePath = (pathname: string) => pathname.replace(/\/+$|^\/\/$/g, '/')
@@ -15,7 +15,7 @@ const normalizePath = (pathname: string) => pathname.replace(/\/+$|^\/\/$/g, '/'
 const routeDefinitions = [
   {
     path: '/animation-mariage-toulouse',
-    element: <AnimationMariageToulousePage />,
+    element: <AnimationMariageToulouse />,
   },
   {
     path: '/animation-bapteme-toulouse',
