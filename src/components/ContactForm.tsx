@@ -81,10 +81,15 @@ export function ContactForm() {
 
         <div className="bg-white/95 p-10 md:p-12 rounded-[32px] shadow-soft border border-border/20 backdrop-blur-sm">
           <form
-            action="https://formsubmit.co/lebaramagnets@outlook.com"
+            action="https://api.web3forms.com/submit"
             method="POST"
             className="space-y-6"
           >
+            <input
+              type="hidden"
+              name="access_key"
+              value="340740a0-3b6b-4e5a-8894-945f17ee94e6"
+            />
             <input
               type="hidden"
               name="_subject"
