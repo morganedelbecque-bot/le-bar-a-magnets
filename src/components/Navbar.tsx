@@ -15,7 +15,7 @@ export function Navbar() {
     { href: "#concept", label: "Concept" },
     { href: "#etapes", label: "Étapes" },
     { href: "#galerie", label: "Galerie" },
-    { href: "#pourquoi", label: "Pourquoi nous" },
+    { href: "#tarifs", label: "Tarifs" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Devis" },
   ];

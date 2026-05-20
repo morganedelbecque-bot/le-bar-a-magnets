@@ -38,7 +38,7 @@ const formulas = [
 
 export function PricingCards() {
   return (
-    <section className="relative overflow-hidden bg-[#fbf7f1] py-24 px-6 md:py-32">
+    <section id="tarifs" className="relative overflow-hidden bg-[#fbf7f1] py-24 px-6 md:py-32">
       <div className="absolute left-8 top-10 h-24 w-24 rounded-full border border-[#d9b56d]/20" />
       <div className="absolute right-6 bottom-12 h-32 w-32 rounded-full border border-[#c48d8d]/20" />
 
