@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Hero } from './components/Hero'
 import { Concept } from './components/Concept'
 import { Steps } from './components/Steps'
@@ -70,6 +71,7 @@ export function App() {
         </>
       )}
       <Footer />
+      <Analytics />
     </main>
   )
 }
