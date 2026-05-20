@@ -6,6 +6,7 @@ import { WhyUs } from './components/WhyUs'
 import { FAQ } from './components/FAQ'
 import { ContactForm } from './components/ContactForm'
 import GiftOrder from './components/GiftOrder'
+import { PricingCards } from './components/PricingCards'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
@@ -62,6 +63,7 @@ export function App() {
           <WhyUs />
           <FAQ />
           <GiftOrder />
+          <PricingCards />
           <ContactForm />
         </>
       )}
