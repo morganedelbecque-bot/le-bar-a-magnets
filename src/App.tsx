@@ -8,6 +8,7 @@ import { ContactForm } from './components/ContactForm'
 import GiftOrder from './components/GiftOrder'
 import { PricingCards } from './components/PricingCards'
 import { Navbar } from './components/Navbar'
+import { TechnicalNeeds } from './components/TechnicalNeeds'
 import { Footer } from './components/Footer'
 import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
 import AnimationBaptemeToulouse from './pages/AnimationBaptemeToulouse'
@@ -65,6 +66,7 @@ export function App() {
           <GiftOrder />
           <PricingCards />
           <ContactForm />
+          <TechnicalNeeds />
         </>
       )}
       <Footer />
