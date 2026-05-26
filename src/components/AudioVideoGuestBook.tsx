@@ -2,12 +2,12 @@ import livreAudioAmbiance from "@/assets/livre-audio-ambiance.jpg";
 import livreAudioDetail from "@/assets/livre-audio-detail.jpg";
 import livreAudioElegant from "@/assets/livre-audio-elegant.jpg";
 import livreAudioGuests from "@/assets/livre-audio-couple.jpg";
-import livreAudioHero from "@/assets/livre-audio-hero.jpg";
+import livreAudioHero from "@/assets/livre-audio-hero.webp";
 import livreAudioSetup from "@/assets/livre-audio-setup.jpg";
 import livreVideoAmbiance from "@/assets/livre-video-ambiance.jpg";
 import livreVideoDetail from "@/assets/livre-video-detail.jpg";
 import livreVideoGuests from "@/assets/livre-video-guests.jpg";
-import livreVideoPremium from "@/assets/livre-video-premium.jpg";
+import livreVideoPremium from "@/assets/livre-video-premium.webp";
 import livreVideoSetup from "@/assets/livre-video-setup.jpg";
 
 const guestBookPlans = [
