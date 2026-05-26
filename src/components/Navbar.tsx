@@ -16,6 +16,7 @@ export function Navbar() {
     { href: "#etapes", label: "Étapes" },
     { href: "#galerie", label: "Galerie" },
     { href: "#tarifs", label: "Tarifs" },
+    { href: "#livre-or-audio-video", label: "Audio & Vidéo" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Devis" },
   ];
