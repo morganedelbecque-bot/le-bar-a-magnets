@@ -35,8 +35,51 @@ const faqs = [
   },
 ];
 
+const guestBookFaqs = [
+  {
+    q: "Comment fonctionne le livre d’or audio ?",
+    a: "Les invités décrochent simplement le téléphone vintage et laissent un message vocal rempli d’émotions, de rires et de souvenirs pour les mariés ou les invités d’honneur.",
+  },
+  {
+    q: "Comment fonctionne le livre d’or audio & vidéo ?",
+    a: "Les invités peuvent enregistrer des messages vidéo et audio directement depuis le téléphone vintage équipé d’un écran. Une expérience originale et immersive pour conserver des souvenirs uniques.",
+  },
+  {
+    q: "Les messages sont-ils illimités ?",
+    a: "Oui, tous nos livres d’or audio et audio & vidéo permettent des enregistrements illimités pendant toute la durée de votre événement.",
+  },
+  {
+    q: "Quand récupérons-nous les souvenirs ?",
+    a: "Les fichiers audio et vidéo sont transmis après l’événement afin que vous puissiez conserver et revivre ces précieux souvenirs à tout moment.",
+  },
+  {
+    q: "Installez-vous le matériel sur place ?",
+    a: "Oui, l’installation et la désinstallation sont réalisées par nos soins afin de garantir une mise en scène élégante et un fonctionnement optimal.",
+  },
+  {
+    q: "Intervenez-vous uniquement pour les mariages ?",
+    a: "Non, nos livres d’or audio et vidéo sont également disponibles pour les anniversaires, baptêmes, baby showers, événements privés et professionnels.",
+  },
+  {
+    q: "La décoration est-elle incluse ?",
+    a: "Nos formules premium incluent une véritable mise en scène décorative avec rideaux tulle, éclairage LED et décoration élégante pour sublimer votre événement.",
+  },
+];
+
+const faqGroups = [
+  {
+    title: "Le Bar à Magnets",
+    items: faqs,
+  },
+  {
+    title: "Livre d’or audio & vidéo",
+    items: guestBookFaqs,
+  },
+];
+
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
+  let itemIndex = 0;
 
   return (
     <section id="faq" className="py-28 md:py-40 bg-[#fbf1ea]">
@@ -57,47 +100,58 @@ export function FAQ() {
           </p>
         </div>
 
-        <div className="divide-y divide-[#eaded6] border-t border-b border-[#eaded6]">
-          {faqs.map((f, i) => {
-            const isOpen = open === i;
+        <div className="space-y-12">
+          {faqGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="mb-5 font-serif text-2xl font-light leading-tight text-[#2d1d1a] md:text-3xl">
+                {group.title}
+              </h3>
 
-            return (
-              <div key={i}>
-                <button
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full flex items-start justify-between gap-6 py-5 px-6 rounded-[28px] text-left group transition-colors duration-300 hover:bg-[#f8efe9]"
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-serif font-light text-xl md:text-2xl leading-snug text-[#2d1d1a] transition-colors">
-                    {f.q}
-                  </span>
+              <div className="divide-y divide-[#eaded6] border-t border-b border-[#eaded6]">
+                {group.items.map((f) => {
+                  const currentIndex = itemIndex++;
+                  const isOpen = open === currentIndex;
 
-                  <span
-                    className={`shrink-0 mt-1 w-8 h-8 rounded-full border border-[#d9b56d] flex items-center justify-center text-[#d9b56d] transition-transform duration-500 ${
-                      isOpen ? "rotate-45 bg-[#d9b56d]/10" : "bg-transparent"
-                    }`}
-                    aria-hidden
-                  >
-                    <span className="text-xl leading-none">+</span>
-                  </span>
-                </button>
+                  return (
+                    <div key={f.q}>
+                      <button
+                        onClick={() => setOpen(isOpen ? null : currentIndex)}
+                        className="w-full flex items-start justify-between gap-6 py-5 px-6 rounded-[28px] text-left group transition-colors duration-300 hover:bg-[#f8efe9]"
+                        aria-expanded={isOpen}
+                      >
+                        <span className="font-serif font-light text-xl md:text-2xl leading-snug text-[#2d1d1a] transition-colors">
+                          {f.q}
+                        </span>
 
-                <div
-                  className={`grid transition-all duration-500 ease-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100 pb-6"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <p className="text-[#5f514d] leading-8 pr-14 font-serif font-normal text-base">
-                      {f.a}
-                    </p>
-                  </div>
-                </div>
+                        <span
+                          className={`shrink-0 mt-1 w-8 h-8 rounded-full border border-[#d9b56d] flex items-center justify-center text-[#d9b56d] transition-transform duration-500 ${
+                            isOpen ? "rotate-45 bg-[#d9b56d]/10" : "bg-transparent"
+                          }`}
+                          aria-hidden
+                        >
+                          <span className="text-xl leading-none">+</span>
+                        </span>
+                      </button>
+
+                      <div
+                        className={`grid transition-all duration-500 ease-out ${
+                          isOpen
+                            ? "grid-rows-[1fr] opacity-100 pb-6"
+                            : "grid-rows-[0fr] opacity-0"
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <p className="text-[#5f514d] leading-8 pr-14 font-serif font-normal text-base">
+                            {f.a}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         <div className="text-center mt-14">

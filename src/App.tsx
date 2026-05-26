@@ -62,14 +62,14 @@ export function App() {
           <Hero />
           <Concept />
           <Steps />
-          <Gallery />
           <WhyUs />
-          <FAQ />
           <GiftOrder />
+          <TechnicalNeeds />
           <PricingCards />
+          <Gallery />
           <AudioVideoGuestBook />
           <ContactForm />
-          <TechnicalNeeds />
+          <FAQ />
         </>
       )}
       <Footer />
