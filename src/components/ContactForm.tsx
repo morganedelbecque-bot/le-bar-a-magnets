@@ -13,6 +13,17 @@ const eventTypes = [
   "Autre",
 ];
 
+const prestationOptions = [
+  "Bar à magnets",
+  "Livre d’or audio",
+  "Livre d’or audio premium",
+  "Livre d’or audio & vidéo",
+  "Livre d’or audio & vidéo premium",
+  "Bar à magnets + livre d’or audio",
+  "Bar à magnets + livre d’or audio & vidéo",
+  "Je ne sais pas encore",
+];
+
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
@@ -41,6 +52,7 @@ export function ContactForm() {
     const date = String(data.get("date") || "");
     const invites = String(data.get("invites") || "");
     const lieu = String(data.get("lieu") || "");
+    const prestation = String(data.get("prestation") || "");
     const typeEv = String(data.get("type") || "");
     const messageText = String(data.get("message") || "");
 
@@ -72,6 +84,7 @@ export function ContactForm() {
                 <tr><td style="padding:8px 0; color:#8b6b54;">Date</td><td style="padding:8px 0;">${escapeHtml(date)}</td></tr>
                 <tr><td style="padding:8px 0; color:#8b6b54;">Nombre d'invités</td><td style="padding:8px 0;">${escapeHtml(invites)}</td></tr>
                 <tr><td style="padding:8px 0; color:#8b6b54;">Lieu</td><td style="padding:8px 0;">${escapeHtml(lieu)}</td></tr>
+                <tr><td style="padding:8px 0; color:#8b6b54;">Prestation souhaitée</td><td style="padding:8px 0;">${escapeHtml(prestation)}</td></tr>
                 <tr><td style="padding:8px 0; color:#8b6b54;">Type d'événement</td><td style="padding:8px 0;">${escapeHtml(typeEv)}</td></tr>
               </tbody>
             </table>
@@ -99,6 +112,7 @@ export function ContactForm() {
       date,
       invites,
       lieu,
+      prestation,
       type: typeEv,
       message: htmlMessage,
     };
@@ -204,6 +218,17 @@ export function ContactForm() {
             </div>
 
             <Field label="Lieu de l'événement" name="lieu" required />
+
+            <div>
+              <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">Prestation souhaitée</label>
+
+              <select name="prestation" required className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-sm transition-colors">
+                <option value="">Choisir…</option>
+                {prestationOptions.map((prestation) => (
+                  <option key={prestation}>{prestation}</option>
+                ))}
+              </select>
+            </div>
 
             <div>
               <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">Type d'événement</label>

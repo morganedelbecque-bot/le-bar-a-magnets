@@ -36,6 +36,13 @@ const formulas = [
   },
 ];
 
+const complementaryOptions = [
+  "Livre d’or audio : +149€",
+  "Livre d’or audio premium : +199€",
+  "Livre d’or audio & vidéo : +249€",
+  "Livre d’or audio & vidéo premium : +299€",
+];
+
 export function PricingCards() {
   return (
     <section id="tarifs" className="relative overflow-hidden bg-[#fbf7f1] py-24 px-6 md:py-32">
@@ -98,6 +105,25 @@ export function PricingCards() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8 rounded-[24px] border border-[#eaded6] bg-[#fff8ef]/80 p-5">
+                <h4 className="font-serif text-xl text-[#2d1d1a]">
+                  Options complémentaires
+                </h4>
+
+                <ul className="mt-4 space-y-2 text-sm leading-6 text-[#5f514d]">
+                  {complementaryOptions.map((option) => (
+                    <li key={option} className="flex gap-3">
+                      <span className="mt-0.5 text-[#d9b56d]">✦</span>
+                      <span>{option}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-4 text-xs uppercase tracking-[0.18em] text-[#9b6d2f]">
+                  Options cumulables avec toutes les formules.
+                </p>
+              </div>
 
               <a
                 href="#contact"
