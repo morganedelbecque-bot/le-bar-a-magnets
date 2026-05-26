@@ -64,6 +64,10 @@ const guestBookFaqs = [
     q: "La décoration est-elle incluse ?",
     a: "Nos formules premium incluent une véritable mise en scène décorative avec rideaux tulle, éclairage LED et décoration élégante pour sublimer votre événement.",
   },
+  {
+    q: "Un chèque de caution est-il demandé ?",
+    a: "Oui, un chèque de caution pourra être demandé lors de la mise à disposition du matériel afin de garantir sa sécurité pendant toute la durée de l’événement.\n\nLe montant de la caution est de :\n- 300€ pour le livre d’or audio\n- 500€ pour le livre d’or audio & vidéo\n\nLe chèque n’est pas encaissé et est restitué après vérification du matériel.",
+  },
 ];
 
 const faqGroups = [
@@ -141,7 +145,7 @@ export function FAQ() {
                         }`}
                       >
                         <div className="overflow-hidden">
-                          <p className="text-[#5f514d] leading-8 pr-14 font-serif font-normal text-base">
+                          <p className="whitespace-pre-line text-[#5f514d] leading-8 pr-14 font-serif font-normal text-base">
                             {f.a}
                           </p>
                         </div>
