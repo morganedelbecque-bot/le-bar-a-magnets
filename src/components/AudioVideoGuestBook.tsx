@@ -143,7 +143,7 @@ export function AudioVideoGuestBook() {
             </p>
 
             <h2 className="font-display text-4xl leading-tight text-[#2b2523] md:text-6xl">
-              Livre d’or audio & vidéo
+              Livre d’or audio & vidéo mariage Toulouse
             </h2>
 
             <div className="gold-divider my-8" />
@@ -153,7 +153,7 @@ export function AudioVideoGuestBook() {
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-[#6b625c] md:text-lg">
-              Offrez à vos invités une façon originale de laisser un souvenir précieux lors de votre événement. Grâce à notre livre d’or audio ou audio & vidéo vintage, vos proches pourront enregistrer des messages remplis d’émotions, de rires et d’amour à réécouter encore et encore après votre mariage, anniversaire, baptême ou événement privé.
+              Offrez à vos invités une façon originale de laisser un souvenir précieux lors de votre événement. Grâce à notre livre d’or audio mariage Toulouse ou livre d’or vidéo mariage Toulouse, vos proches pourront enregistrer des messages remplis d’émotions, de rires et d’amour à réécouter encore et encore après votre mariage, anniversaire, baptême ou événement privé.
             </p>
 
             <a
@@ -168,8 +168,10 @@ export function AudioVideoGuestBook() {
             <div className="aspect-[4/5] overflow-hidden rounded-[32px] shadow-soft">
               <img
                 src={livreAudioHero}
-                alt="Mise en scène élégante pour livre d’or audio et vidéo"
+                alt="Téléphone audio mariage et livre d’or vidéo mariage Toulouse"
                 loading="lazy"
+                width="900"
+                height="1125"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -271,6 +273,8 @@ export function AudioVideoGuestBook() {
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
+                  width="800"
+                  height="600"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1300ms] ease-out group-hover:scale-110"
                 />
 

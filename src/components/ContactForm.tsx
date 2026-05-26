@@ -151,7 +151,14 @@ export function ContactForm() {
   return (
     <section id="contact" className="relative py-28 md:py-40 overflow-hidden bg-cream">
       <div className="absolute top-0 left-0 w-1/2 h-full hidden lg:block">
-        <img src={chalkboard} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <img
+          src={chalkboard}
+          alt="Demande de devis animation mariage Toulouse et livre d’or audio vidéo"
+          className="w-full h-full object-cover"
+          loading="lazy"
+          width="900"
+          height="1200"
+        />
 
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#f8f1ec]/65 to-[#f8f1ec]" />
         <div className="absolute inset-0 bg-[#f8f1ec]/20" />
@@ -169,7 +176,10 @@ export function ContactForm() {
           <div className="gold-divider my-6 !mx-0" />
 
           <p className="text-foreground/70 text-lg leading-relaxed">
-            Chaque événement est unique. Confiez-nous vos envies, votre date, votre lieu — nous reviendrons rapidement vers vous avec une proposition sur mesure.
+            Chaque événement est unique. Confiez-nous vos envies pour une
+            animation mariage Toulouse, un téléphone audio mariage, un
+            téléphone vidéo mariage ou un bar à magnets Toulouse — nous
+            reviendrons rapidement vers vous avec une proposition sur mesure.
           </p>
 
           <div className="mt-10 space-y-4 text-sm">

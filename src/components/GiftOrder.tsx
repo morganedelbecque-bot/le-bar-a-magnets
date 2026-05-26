@@ -39,7 +39,10 @@ export default function GiftOrder() {
 
         <img
           src={giftImage}
-          alt="Commande cadeau invité magnets personnalisés"
+          alt="Commande cadeau invités magnets personnalisés pour mariage Toulouse"
+          loading="lazy"
+          width="900"
+          height="900"
           className="w-full rounded-3xl shadow-xl object-cover"
         />
 

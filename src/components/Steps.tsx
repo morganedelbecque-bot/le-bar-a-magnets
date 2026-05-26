@@ -8,24 +8,28 @@ const steps = [
     n: "01",
     t: "Ils scannent le QR code",
     image: stepQr,
+    alt: "QR code pour animation mariage Toulouse et bar à magnets",
     d: "Un cadre élégant posé sur le stand invite vos convives à scanner avec leur téléphone.",
   },
   {
     n: "02",
     t: "Ils envoient leur photo",
     image: stepSelfie,
+    alt: "Invités qui participent à une animation invités mariage",
     d: "Via WhatsApp, en quelques secondes — selfie, couple, famille, fou rire entre amis.",
   },
   {
     n: "03",
     t: "Le magnet est fabriqué",
     image: stepPress,
+    alt: "Fabrication de magnet personnalisé pour animation événementielle Toulouse",
     d: "Nous l'imprimons, le découpons et le pressons sous leurs yeux. La magie opère.",
   },
   {
     n: "04",
     t: "Ils repartent avec",
     image: stepMagnet,
+    alt: "Souvenir magnet personnalisé pour mariage baptême anniversaire Toulouse",
     d: "Un magnet rond 58 mm à coller sur leur frigo. Un souvenir précieux, pour toujours.",
   },
 ];
@@ -46,7 +50,7 @@ export function Steps() {
           <div className="mx-auto my-6 h-px w-24 bg-[#e7c98f]/60" />
 
           <p className="text-[#675949] text-base md:text-lg leading-relaxed">
-            Quatre étapes simples pour créer un souvenir tangible et émouvant.
+            Quatre étapes simples pour une animation invités mariage fluide, premium et mémorable.
           </p>
         </div>
 
@@ -59,8 +63,10 @@ export function Steps() {
               <div className="aspect-[4/5] overflow-hidden rounded-[24px] bg-[#f2dfd7]">
                 <img
                   src={s.image}
-                  alt=""
+                  alt={s.alt}
                   loading="lazy"
+                  width="700"
+                  height="875"
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -9,8 +9,8 @@ export function Footer() {
             </div>
 
             <p className="text-[#d8c3b5] text-sm leading-relaxed">
-              Animation événementielle haut de gamme — des souvenirs
-              instantanés pour vos plus beaux moments.
+              Animation événementielle haut de gamme à Toulouse : bar à
+              magnets, livre d’or audio mariage et livre d’or vidéo mariage.
             </p>
           </div>
 
@@ -88,6 +88,17 @@ export function Footer() {
             <p className="text-sm text-[#d8c3b5]/90 mt-3">
               Mariages · Baptêmes · Baby showers · Anniversaires · Événements privés · Soirées d’entreprise
             </p>
+
+            <div className="mt-6 text-xs leading-6 text-[#d8c3b5]/75">
+              <p>
+                Zones desservies : Toulouse, Saint-Jory, Blagnac, Colomiers,
+                Balma, Montauban, Albi, Occitanie.
+              </p>
+              <p className="mt-2">
+                Événements : mariage, anniversaire, baptême, baby shower,
+                entreprise.
+              </p>
+            </div>
           </div>
         </div>
 

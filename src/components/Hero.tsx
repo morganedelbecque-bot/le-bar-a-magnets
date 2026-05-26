@@ -38,7 +38,9 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Stand Le Bar à Magnets dans un mariage chic"
+          alt="Bar à magnets Toulouse pour animation mariage premium en Occitanie"
+          width="1800"
+          height="1200"
           className="w-full h-full object-cover animate-slow-zoom"
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -78,11 +80,11 @@ export function Hero() {
         <div className="gold-divider mx-auto my-8 animate-fade-up delay-200" />
 
         <p className="font-serif italic text-xl md:text-2xl text-[#f6eadb] max-w-2xl mx-auto text-balance animate-fade-up delay-200">
-          Des souvenirs instantanés pour vos plus beaux événements.
+          Bar à magnets Toulouse, livre d’or audio et vidéo pour vos plus beaux événements.
         </p>
 
         <p className="mt-6 text-[#f6eadb] max-w-xl mx-auto text-sm md:text-base animate-fade-up delay-300">
-          Mariages · Baptêmes · Baby showers · Anniversaires · Événements privés · Soirées d’entreprise
+          Animation mariage Toulouse · Baptêmes · Baby showers · Anniversaires · Événements privés · Soirées d’entreprise
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center animate-fade-up delay-500">

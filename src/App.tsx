@@ -12,12 +12,14 @@ import { PricingCards } from './components/PricingCards'
 import { Navbar } from './components/Navbar'
 import { TechnicalNeeds } from './components/TechnicalNeeds'
 import { Footer } from './components/Footer'
+import { SEO } from './components/SEO'
 import AnimationMariageToulouse from './pages/AnimationMariageToulouse'
 import AnimationBaptemeToulouse from './pages/AnimationBaptemeToulouse'
 import AnimationAnniversaireToulouse from './pages/AnimationAnniversaireToulouse'
 import AnimationBabyShowerToulouse from './pages/AnimationBabyShowerToulouse'
 import AnimationEvenementielleToulouse from './pages/AnimationEvenementielleToulouse'
 import BarAMagnetsOccitanie from './pages/BarAMagnetsOccitanie'
+import LivreDorAudioMariageToulouse from './pages/LivreDorAudioMariageToulouse'
 
 const normalizePath = (pathname: string) => pathname.replace(/\/+$|^\/\/$/g, '/')
 
@@ -46,6 +48,10 @@ const routeDefinitions = [
     path: '/bar-a-magnets-occitanie',
     element: <BarAMagnetsOccitanie />,
   },
+  {
+    path: '/livre-dor-audio-mariage-toulouse',
+    element: <LivreDorAudioMariageToulouse />,
+  },
 ]
 
 export function App() {
@@ -54,6 +60,7 @@ export function App() {
 
   return (
     <main className="bg-[#fcf1ec] font-sans text-slate-950">
+      <SEO />
       <Navbar />
       {route ? (
         route.element

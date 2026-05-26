@@ -36,8 +36,10 @@ export function WhyUs() {
       <div className="absolute inset-0">
         <img
           src={ambiance}
-          alt=""
+          alt="Animation premium mariage avec bar à magnets Toulouse"
           loading="lazy"
+          width="1800"
+          height="1200"
           className="w-full h-full object-cover opacity-[0.28]"
         />
 
@@ -58,8 +60,9 @@ export function WhyUs() {
           <div className="mx-0 my-6 h-px w-24 bg-[#d9b56d]/40" />
 
           <p className="text-[#5f514d] text-lg leading-relaxed">
-            Plus qu'une animation : un véritable moment de partage qui marque
-            les esprits et laisse une trace dans la maison de chacun.
+            Plus qu'une animation premium mariage : un véritable moment de
+            partage qui marque les esprits et laisse une trace dans la maison
+            de chacun, de Toulouse à l'Occitanie.
           </p>
         </div>
 

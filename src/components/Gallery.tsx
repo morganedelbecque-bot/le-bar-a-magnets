@@ -8,14 +8,14 @@ import qr from "@/assets/qr-frame.jpg";
 import hand from "@/assets/magnet-hand.jpg";
 
 const items = [
-  { src: hero, alt: "Stand complet Le Bar à Magnets", span: "md:col-span-2 md:row-span-2" },
-  { src: magnets, alt: "Magnets ronds personnalisés", span: "" },
-  { src: making, alt: "Fabrication des magnets en direct", span: "" },
-  { src: chalkboard, alt: "Tableau noir avec magnets souvenirs", span: "md:col-span-2" },
-  { src: guests, alt: "Invités élégants autour du stand", span: "" },
-  { src: hand, alt: "Magnet souvenir tenu en main", span: "" },
-  { src: qr, alt: "QR code dans cadre doré", span: "" },
-  { src: ambiance, alt: "Ambiance chaleureuse de mariage", span: "md:col-span-2" },
+  { src: hero, alt: "Stand complet bar à magnets Toulouse pour animation mariage", span: "md:col-span-2 md:row-span-2" },
+  { src: magnets, alt: "Magnets ronds personnalisés pour souvenirs invités mariage", span: "" },
+  { src: making, alt: "Fabrication de magnets en direct pour animation événementielle Toulouse", span: "" },
+  { src: chalkboard, alt: "Tableau noir avec magnets souvenirs pour mariage en Occitanie", span: "md:col-span-2" },
+  { src: guests, alt: "Invités autour du stand animation mariage Toulouse", span: "" },
+  { src: hand, alt: "Magnet souvenir tenu en main pour bar à magnets Toulouse", span: "" },
+  { src: qr, alt: "QR code dans cadre doré pour animation invités mariage", span: "" },
+  { src: ambiance, alt: "Ambiance chaleureuse de mariage avec animation premium", span: "md:col-span-2" },
 ];
 
 export function Gallery() {
@@ -28,13 +28,13 @@ export function Gallery() {
           </p>
 
           <h2 className="font-display text-4xl md:text-5xl text-balance">
-            L'instant figé en image
+            Galerie animation mariage Toulouse
           </h2>
 
           <div className="gold-divider mx-auto my-6" />
 
           <p className="text-foreground/70">
-            Plongez dans l'ambiance d'un Bar à Magnets installé pour une soirée exceptionnelle.
+            Plongez dans l'ambiance d'un Bar à Magnets installé pour une animation événementielle Toulouse, un mariage, un baptême ou une soirée exceptionnelle.
           </p>
         </div>
 
@@ -48,6 +48,8 @@ export function Gallery() {
                 src={it.src}
                 alt={it.alt}
                 loading="lazy"
+                width="800"
+                height="600"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110"
               />
 

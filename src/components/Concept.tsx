@@ -12,8 +12,10 @@ export function Concept() {
           <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-soft">
             <img
               src={magnetHand}
-              alt="Magnet photo personnalisé tenu en main"
+              alt="Magnet photo personnalisé pour animation invités mariage à Toulouse"
               loading="lazy"
+              width="900"
+              height="1125"
               className="w-full h-full object-cover"
             />
           </div>
@@ -21,8 +23,10 @@ export function Concept() {
           <div className="absolute -bottom-10 -right-6 md:-right-16 w-2/3 aspect-square rounded-[28px] overflow-hidden shadow-gold border-4 border-background hidden sm:block">
             <img
               src={qrFrame}
-              alt="QR code dans cadre doré sur table de mariage"
+              alt="QR code élégant pour animation événementielle Toulouse et bar à magnets"
               loading="lazy"
+              width="700"
+              height="700"
               className="w-full h-full object-cover"
             />
           </div>
@@ -34,7 +38,7 @@ export function Concept() {
           </p>
 
           <h2 className="font-display text-4xl md:text-5xl leading-tight text-balance">
-            Un souvenir <em className="text-primary">unique</em>,
+            Un bar à magnets Toulouse <em className="text-primary">unique</em>,
             créé en direct devant vos invités.
           </h2>
 
@@ -43,8 +47,8 @@ export function Concept() {
           <p className="text-foreground/75 leading-relaxed text-lg">
             Le Bar à Magnets transforme chaque photo en magnet rond souvenir,
             fabriqué sur place pendant votre événement. Une animation
-            chaleureuse, élégante et originale qui rassemble naturellement
-            vos invités autour d'une expérience inoubliable.
+            mariage Toulouse chaleureuse, élégante et originale qui rassemble
+            naturellement vos invités autour d'une expérience inoubliable.
           </p>
 
           <p className="mt-6 text-foreground/70 leading-relaxed">
