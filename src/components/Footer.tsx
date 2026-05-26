@@ -65,6 +65,22 @@ export function Footer() {
               </li>
 
               <li>
+                <a href="/livre-dor-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or audio mariage Toulouse">Livre d’or audio mariage Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/livre-dor-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or vidéo mariage Toulouse">Livre d’or vidéo mariage Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/telephone-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone audio mariage Toulouse">Téléphone audio mariage Toulouse</a>
+              </li>
+
+              <li>
+                <a href="/telephone-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone vidéo mariage Toulouse">Téléphone vidéo mariage Toulouse</a>
+              </li>
+
+              <li>
                 <a href="#contact" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Devis">
                   Devis
                 </a>
