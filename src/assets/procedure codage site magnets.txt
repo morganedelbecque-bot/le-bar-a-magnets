@@ -1,0 +1,55 @@
+A dire a gpt avant de commencer
+
+Je suis sur l’agent VS Code  ou  Je suis sur Codex CLI
+
+
+
+
+
+
+Lancer site sur VS code -  ouvrir un nouveau terminal 
+coller
+
+npm run dev                   relancer pour voir modif - reactualiser la page du site
+
+
+
+ctrl + c = quitter pour relancer
+
+---------------------------------------------------------------
+
+coder avec l'agent - demander a chat fenêtre conv. agent
+
+-------------------
+
+ne pas oublier Ctrl + S pour sauvegarder
+
+Pour sauvegarde fichier bureau FZ morgane sauvegarde 
+clique droit - executer avec power shell
+
+---------------------------------------------------------------
+chaque fois que tu modifies ton site dans VS Code, tu peux mettre la version en ligne à jour automatiquement.
+
+Le fonctionnement devient :
+
+Tu modifies le site dans VS Code
+(photos, textes, couleurs, etc.)
+Quand c’est prêt, tu tapes dans le terminal :
+
+git add .
+git commit -m "mise a jour"
+git push
+
+Vercel détecte automatiquement les changements
+Ton site en ligne se met à jour tout seul en 30 secondes 🚀
+
+Tu n’auras plus jamais besoin de republier manuellement.
+
+----------------------------------------------------------
+
+Pour Lancer codex de gpt
+
+codex
+
+----------------------------------------------------
+

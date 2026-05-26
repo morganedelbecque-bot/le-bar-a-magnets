@@ -1,10 +1,14 @@
-import ambiance from "@/assets/ambiance.jpg";
-import chalkboard from "@/assets/chalkboard.jpg";
-import guests from "@/assets/guests.jpg";
-import heroStand from "@/assets/hero-stand.jpg";
-import magnetHand from "@/assets/magnet-hand.jpg";
-import makingMagnets from "@/assets/making-magnets.jpg";
-import qrFrame from "@/assets/qr-frame.jpg";
+import livreAudioAmbiance from "@/assets/livre-audio-ambiance.jpg";
+import livreAudioDetail from "@/assets/livre-audio-detail.jpg";
+import livreAudioElegant from "@/assets/livre-audio-elegant.jpg";
+import livreAudioGuests from "@/assets/livre-audio-couple.jpg";
+import livreAudioHero from "@/assets/livre-audio-hero.jpg";
+import livreAudioSetup from "@/assets/livre-audio-setup.jpg";
+import livreVideoAmbiance from "@/assets/livre-video-ambiance.jpg";
+import livreVideoDetail from "@/assets/livre-video-detail.jpg";
+import livreVideoGuests from "@/assets/livre-video-guests.jpg";
+import livreVideoPremium from "@/assets/livre-video-premium.jpg";
+import livreVideoSetup from "@/assets/livre-video-setup.jpg";
 
 const guestBookPlans = [
   {
@@ -64,45 +68,63 @@ const guestBookPlans = [
 
 const galleryItems = [
   {
-    src: qrFrame,
-    alt: "Téléphone audio seul",
+    src: livreAudioSetup,
+    alt: "Installation du livre d’or audio",
     label: "Téléphone audio seul",
     span: "md:col-span-2",
   },
   {
-    src: magnetHand,
-    alt: "Téléphone audio & vidéo",
+    src: livreAudioDetail,
+    alt: "Détail du livre d’or audio",
     label: "Téléphone audio & vidéo",
     span: "",
   },
   {
-    src: guests,
-    alt: "Invités qui utilisent le téléphone",
+    src: livreAudioGuests,
+    alt: "Invités qui utilisent le livre d’or audio",
     label: "Invités qui utilisent le téléphone",
     span: "",
   },
   {
-    src: heroStand,
-    alt: "Vue d’ensemble du stand",
+    src: livreAudioAmbiance,
+    alt: "Ambiance autour du livre d’or audio",
     label: "Vue d’ensemble du stand",
     span: "md:col-span-2 md:row-span-2",
   },
   {
-    src: chalkboard,
-    alt: "Détails déco",
+    src: livreAudioElegant,
+    alt: "Mise en scène premium du livre d’or audio",
     label: "Détails déco",
     span: "",
   },
   {
-    src: ambiance,
-    alt: "Ambiance mariage",
+    src: livreVideoSetup,
+    alt: "Installation du livre d’or audio et vidéo",
     label: "Ambiance mariage",
     span: "",
   },
   {
-    src: makingMagnets,
-    alt: "Baby shower ou anniversaire",
+    src: livreVideoGuests,
+    alt: "Invités qui utilisent le livre d’or audio et vidéo",
     label: "Baby shower / anniversaire",
+    span: "md:col-span-2",
+  },
+  {
+    src: livreVideoAmbiance,
+    alt: "Ambiance du livre d’or vidéo",
+    label: "Ambiance vidéo",
+    span: "",
+  },
+  {
+    src: livreVideoDetail,
+    alt: "Détail du livre d’or vidéo",
+    label: "Détail vidéo",
+    span: "",
+  },
+  {
+    src: livreVideoPremium,
+    alt: "Mise en scène premium du livre d’or vidéo",
+    label: "Stand vidéo premium",
     span: "md:col-span-2",
   },
 ];
@@ -145,7 +167,7 @@ export function AudioVideoGuestBook() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden rounded-[32px] shadow-soft">
               <img
-                src={heroStand}
+                src={livreAudioHero}
                 alt="Mise en scène élégante pour livre d’or audio et vidéo"
                 loading="lazy"
                 className="h-full w-full object-cover"
