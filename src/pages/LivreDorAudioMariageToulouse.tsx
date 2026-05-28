@@ -52,7 +52,7 @@ const faqs = [
     a: "Vos invités décrochent le téléphone audio vintage et enregistrent un message vocal spontané. Après le mariage, les fichiers audio vous sont transmis pour conserver les voix, les rires et les émotions de vos proches.",
   },
   {
-    q: "Proposez-vous aussi un livre d’or vidéo mariage à Toulouse ?",
+    q: "Proposez-vous aussi un livre d’or vidéo pour mariage à Toulouse ?",
     a: "Oui, la version audio & vidéo permet aux invités de laisser des messages filmés et sonores depuis un téléphone vintage équipé d’un écran. C’est une animation immersive, idéale pour revivre les moments forts de la réception.",
   },
   {
@@ -85,7 +85,7 @@ export default function LivreDorAudioMariageToulouse() {
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 py-28 text-center sm:py-32">
           <p className="mb-6 text-[11px] font-medium uppercase tracking-[0.45em] text-[#f6eadb]">
-            Livre d’or audio mariage Toulouse
+            Livre d’or audio pour mariage à Toulouse
           </p>
 
           <h1 className="font-serif text-4xl leading-tight tracking-[-0.02em] text-[#f6eadb] sm:text-5xl md:text-6xl">
@@ -130,11 +130,11 @@ export default function LivreDorAudioMariageToulouse() {
             <div className="gold-divider my-6" />
 
             <p className="text-base leading-relaxed text-[#5f514d] md:text-lg">
-              Le livre d’or audio mariage Toulouse transforme les messages de vos proches en souvenirs vivants. Installé dans un décor élégant, le téléphone audio mariage invite chacun à laisser un mot, une anecdote ou un fou rire, sans contrainte et en toute simplicité.
+              Le livre d’or audio pour mariage à Toulouse transforme les messages de vos proches en souvenirs vivants. Installé dans un décor élégant, le téléphone audio invite chacun à laisser un mot, une anecdote ou un fou rire, sans contrainte et en toute simplicité.
             </p>
 
             <p className="mt-5 text-base leading-relaxed text-[#5f514d]">
-              Pour une expérience encore plus immersive, la version livre d’or vidéo mariage Toulouse permet de conserver les regards, les sourires et les émotions en plus des voix. C’est une animation invités mariage discrète, chic et profondément personnelle.
+              Pour une expérience encore plus immersive, la version livre d’or vidéo pour mariage permet de conserver les regards, les sourires et les émotions en plus des voix. C’est une animation invités discrète, chic et profondément personnelle.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ export default function LivreDorAudioMariageToulouse() {
               "Téléphone audio vintage",
               "Messages audio illimités",
               "Option téléphone vidéo mariage",
-              "Installation à Toulouse et Occitanie",
+              "Installation à Toulouse et en Occitanie",
             ].map((item) => (
               <div key={item} className="rounded-[28px] border border-[#eaded6] bg-white/78 p-6 shadow-soft">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#f4dfda] text-[#c48d8d]">
@@ -203,7 +203,7 @@ export default function LivreDorAudioMariageToulouse() {
               Questions fréquentes
             </p>
             <h2 className="font-display text-4xl leading-tight text-[#2b2523] md:text-5xl">
-              FAQ livre d’or audio mariage Toulouse
+              FAQ livre d’or audio pour mariage à Toulouse
             </h2>
           </div>
 

@@ -64,7 +64,7 @@ export function PricingCards() {
           <p className="text-base leading-relaxed text-[#6b625c] md:text-lg">
             Trois expériences pensées pour s’adapter à votre réception, de
             l’essentiel raffiné à la prestation la plus complète pour une
-            animation mariage Toulouse, baptême, anniversaire ou événement
+            animation de mariage à Toulouse, un baptême, un anniversaire ou un événement
             professionnel.
           </p>
         </div>

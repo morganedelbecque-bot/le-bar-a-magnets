@@ -21,18 +21,18 @@ export default function AnimationMariageToulouse() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 sm:py-32 text-center">
           <p className="text-[11px] uppercase tracking-[0.45em] text-[#f6eadb] opacity-95 mb-6 font-medium">
-            Animation mariage Toulouse
+            Animation de mariage à Toulouse
           </p>
 
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#f6eadb] leading-tight tracking-[-0.02em]">
-            Animation mariage
-            <span className="block text-[#e4c487] mt-3">Le Bar à Magnets — Toulouse</span>
+            Animation de mariage
+            <span className="block text-[#e4c487] mt-3">Le Bar à Magnets à Toulouse</span>
           </h1>
 
           <div className="gold-divider mx-auto my-8" />
 
           <p className="mx-auto max-w-3xl text-sm md:text-base text-[#f6eadb] leading-relaxed">
-            Nous proposons une animation mariage élégante et sur-mesure, alliant style, rapidité et souvenirs instantanés pour
+            Nous proposons une animation de mariage élégante et sur-mesure, alliant style, rapidité et souvenirs instantanés pour
             sublimer votre réception à Toulouse.
           </p>
 
@@ -58,11 +58,11 @@ export default function AnimationMariageToulouse() {
           <div>
             <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Présentation</h2>
             <p className="text-foreground/80 leading-relaxed">
-              Le Bar à Magnets propose une animation mariage à Toulouse alliant esthétique raffinée et technologie instantanée.
+              Le Bar à Magnets propose une animation de mariage à Toulouse alliant esthétique raffinée et technologie instantanée.
               Nos stands sont conçus pour s'intégrer à votre décoration et offrir à vos invités une expérience mémorable.
             </p>
 
-            <h3 className="mt-8 font-semibold text-xl">Animation magnets mariage</h3>
+            <h3 className="mt-8 font-semibold text-xl">Animation magnets pour mariage</h3>
             <p className="text-foreground/80 leading-relaxed">
               Nous réalisons des photos sur place et imprimons des magnets personnalisés en quelques secondes. Chaque magnet
               est soigné, avec des finitions haut de gamme et des options de personnalisation pour coller à votre thème.
@@ -73,7 +73,7 @@ export default function AnimationMariageToulouse() {
               <li>Service clé en main et équipe professionnelle</li>
               <li>Matériel et rubriques design premium</li>
               <li>Personnalisation complète des magnets</li>
-              <li>Livraison et installation sur Toulouse</li>
+              <li>Livraison et installation à Toulouse et dans la région toulousaine</li>
             </ul>
 
             <div className="mt-8">
@@ -98,7 +98,7 @@ export default function AnimationMariageToulouse() {
 
               <details className="bg-white/90 p-4 rounded-[12px] border border-border/30">
                 <summary className="cursor-pointer font-medium">Zone d'intervention</summary>
-                <p className="mt-2 text-foreground/75">Nous intervenons principalement sur Toulouse et sa métropole, contactez-nous pour les autres lieux.</p>
+                <p className="mt-2 text-foreground/75">Nous intervenons principalement à Toulouse et dans sa métropole. Contactez-nous pour les autres lieux en Occitanie.</p>
               </details>
             </div>
           </div>

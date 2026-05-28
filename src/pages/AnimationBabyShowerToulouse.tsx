@@ -16,7 +16,7 @@ export default function AnimationBabyShowerToulouse() {
         <div className="absolute inset-0 bg-black/36" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-center">
-          <p className="text-[11px] uppercase tracking-[0.45em] text-[#f6eadb] mb-6 font-medium">Animation baby shower Toulouse</p>
+          <p className="text-[11px] uppercase tracking-[0.45em] text-[#f6eadb] mb-6 font-medium">Animation baby shower à Toulouse</p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#f6eadb]">Baby shower & moments tendres</h1>
           <div className="gold-divider mx-auto my-8" />
           <p className="mx-auto max-w-3xl text-sm md:text-base text-[#f6eadb] leading-relaxed">Des animations délicates et personnalisées pour célébrer l'arrivée d'un enfant, avec souvenirs à emporter.</p>
@@ -27,7 +27,7 @@ export default function AnimationBabyShowerToulouse() {
         <div className="max-w-7xl mx-auto grid gap-12 lg:grid-cols-2 items-start">
           <div>
             <h2 className="font-display text-3xl mb-4">Présentation</h2>
-            <p className="text-foreground/80 leading-relaxed">Nous adaptons nos supports et décors pour une baby shower chaleureuse, élégante et mémorable à Toulouse.</p>
+            <p className="text-foreground/80 leading-relaxed">Nous adaptons nos supports et décors pour une baby shower chaleureuse, élégante et mémorable à Toulouse ou dans la région toulousaine.</p>
 
             <div className="mt-8"><a href="#contact" className="inline-flex items-center justify-center rounded-full bg-[#d9a441] px-6 py-3 text-sm uppercase tracking-[0.12em] text-[#0f0c09] shadow">Demande de devis</a></div>
           </div>

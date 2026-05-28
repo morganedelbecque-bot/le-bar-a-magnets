@@ -150,8 +150,8 @@ export function ContactForm() {
 
           <p className="text-foreground/70 text-lg leading-relaxed">
             Chaque événement est unique. Confiez-nous vos envies pour une
-            animation mariage Toulouse, un téléphone audio mariage, un
-            téléphone vidéo mariage ou un bar à magnets Toulouse — nous
+            animation de mariage à Toulouse, un téléphone audio mariage, un
+            téléphone vidéo mariage ou un bar à magnets en Occitanie — nous
             reviendrons rapidement vers vous avec une proposition sur mesure.
           </p>
 

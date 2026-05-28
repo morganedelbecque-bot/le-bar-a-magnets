@@ -48,7 +48,7 @@ export function AnimationPlaceholderPage({
       <section className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="font-serif text-3xl text-slate-950 mb-6">Page en construction</h2>
         <p className="text-slate-700 leading-relaxed">
-          Cette page sera bientôt enrichie avec une présentation détaillée de nos animations pour {title.toLowerCase()} à Toulouse.
+          Cette page sera bientôt enrichie avec une présentation détaillée de nos animations pour {title.toLowerCase()} à Toulouse et en Occitanie.
           En attendant, contactez-nous pour créer une animation sur mesure pour votre événement: mariage, baptême, anniversaire, baby shower,
           soirée privée ou événement d’entreprise.
         </p>

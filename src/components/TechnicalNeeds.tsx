@@ -36,9 +36,8 @@ export function TechnicalNeeds() {
         </div>
 
         <p className="mx-auto mb-8 max-w-3xl text-center text-sm leading-relaxed text-[#5f514d]">
-          Nos prestations couvrent l’animation baptême Toulouse, l’animation
-          anniversaire Toulouse, l’animation baby shower Toulouse et les
-          événements d’entreprise avec une installation soignée.
+          Nos prestations couvrent les baptêmes, anniversaires, baby showers et
+          événements d’entreprise à Toulouse et en Occitanie, avec une installation soignée.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

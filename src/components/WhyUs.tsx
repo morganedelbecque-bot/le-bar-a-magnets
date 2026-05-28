@@ -62,7 +62,7 @@ export function WhyUs() {
           <p className="text-[#5f514d] text-lg leading-relaxed">
             Plus qu'une animation premium mariage : un véritable moment de
             partage qui marque les esprits et laisse une trace dans la maison
-            de chacun, de Toulouse à l'Occitanie.
+            de chacun, à Toulouse comme en Occitanie.
           </p>
         </div>
 

@@ -143,7 +143,7 @@ export function AudioVideoGuestBook() {
             </p>
 
             <h2 className="font-display text-4xl leading-tight text-[#2b2523] md:text-6xl">
-              Livre d’or audio & vidéo mariage Toulouse
+              Livre d’or audio & vidéo pour mariage à Toulouse
             </h2>
 
             <div className="gold-divider my-8" />
@@ -153,7 +153,7 @@ export function AudioVideoGuestBook() {
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-[#6b625c] md:text-lg">
-              Offrez à vos invités une façon originale de laisser un souvenir précieux lors de votre événement. Grâce à notre livre d’or audio mariage Toulouse ou livre d’or vidéo mariage Toulouse, vos proches pourront enregistrer des messages remplis d’émotions, de rires et d’amour à réécouter encore et encore après votre mariage, anniversaire, baptême ou événement privé.
+              Offrez à vos invités une façon originale de laisser un souvenir précieux lors de votre événement. Grâce à notre livre d’or audio ou vidéo pour mariage à Toulouse et en Occitanie, vos proches pourront enregistrer des messages remplis d’émotions, de rires et d’amour à réécouter encore et encore après votre mariage, anniversaire, baptême ou événement privé.
             </p>
 
             <a

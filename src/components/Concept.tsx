@@ -38,7 +38,7 @@ export function Concept() {
           </p>
 
           <h2 className="font-display text-4xl md:text-5xl leading-tight text-balance">
-            Un bar à magnets Toulouse <em className="text-primary">unique</em>,
+            Un bar à magnets à Toulouse <em className="text-primary">unique</em>,
             créé en direct devant vos invités.
           </h2>
 
@@ -47,7 +47,7 @@ export function Concept() {
           <p className="text-foreground/75 leading-relaxed text-lg">
             Le Bar à Magnets transforme chaque photo en magnet rond souvenir,
             fabriqué sur place pendant votre événement. Une animation
-            mariage Toulouse chaleureuse, élégante et originale qui rassemble
+            de mariage chaleureuse, élégante et originale qui rassemble
             naturellement vos invités autour d'une expérience inoubliable.
           </p>
 

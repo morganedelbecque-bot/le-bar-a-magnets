@@ -9,7 +9,7 @@ export function Footer() {
             </div>
 
             <p className="text-[#d8c3b5] text-sm leading-relaxed">
-              Animation événementielle haut de gamme à Toulouse : bar à
+              Animation événementielle haut de gamme à Toulouse et en Occitanie : bar à
               magnets, livre d’or audio mariage et livre d’or vidéo mariage.
             </p>
           </div>
@@ -40,44 +40,44 @@ export function Footer() {
 
               <li>
                 <a href="/animation-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation mariage Toulouse">
-                  Animation mariage Toulouse
+                  Animation de mariage à Toulouse
                 </a>
               </li>
 
               <li>
-                <a href="/animation-bapteme-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baptême Toulouse">Animation baptême Toulouse</a>
+                <a href="/animation-bapteme-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baptême Toulouse">Animation baptême à Toulouse</a>
               </li>
 
               <li>
-                <a href="/animation-anniversaire-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation anniversaire Toulouse">Animation anniversaire Toulouse</a>
+                <a href="/animation-anniversaire-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation anniversaire Toulouse">Animation anniversaire à Toulouse</a>
               </li>
 
               <li>
-                <a href="/animation-baby-shower-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baby shower Toulouse">Animation baby shower Toulouse</a>
+                <a href="/animation-baby-shower-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation baby shower Toulouse">Animation baby shower à Toulouse</a>
               </li>
 
               <li>
-                <a href="/animation-evenementielle-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation événementielle Toulouse">Animation événementielle Toulouse</a>
+                <a href="/animation-evenementielle-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation événementielle Toulouse">Animation événementielle à Toulouse</a>
               </li>
 
               <li>
-                <a href="/bar-a-magnets-occitanie" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Occitanie">Bar à magnets Occitanie</a>
+                <a href="/bar-a-magnets-occitanie" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Occitanie">Bar à magnets en Occitanie</a>
               </li>
 
               <li>
-                <a href="/livre-dor-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or audio mariage Toulouse">Livre d’or audio mariage Toulouse</a>
+                <a href="/livre-dor-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or audio mariage Toulouse">Livre d’or audio pour mariage à Toulouse</a>
               </li>
 
               <li>
-                <a href="/livre-dor-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or vidéo mariage Toulouse">Livre d’or vidéo mariage Toulouse</a>
+                <a href="/livre-dor-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Livre d’or vidéo mariage Toulouse">Livre d’or vidéo pour mariage à Toulouse</a>
               </li>
 
               <li>
-                <a href="/telephone-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone audio mariage Toulouse">Téléphone audio mariage Toulouse</a>
+                <a href="/telephone-audio-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone audio mariage Toulouse">Téléphone audio pour mariage à Toulouse</a>
               </li>
 
               <li>
-                <a href="/telephone-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone vidéo mariage Toulouse">Téléphone vidéo mariage Toulouse</a>
+                <a href="/telephone-video-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Téléphone vidéo mariage Toulouse">Téléphone vidéo pour mariage à Toulouse</a>
               </li>
 
               <li>
