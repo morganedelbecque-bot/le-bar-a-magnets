@@ -49,6 +49,7 @@ export function ContactForm() {
     const nom = String(data.get("nom") || "");
     const telephone = String(data.get("telephone") || "");
     const email = String(data.get("email") || "");
+    const from_name = [prenom, nom].filter(Boolean).join(" ") || "Demande de devis";
     const date = String(data.get("date") || "");
     const invites = String(data.get("invites") || "");
     const lieu = String(data.get("lieu") || "");
@@ -56,65 +57,37 @@ export function ContactForm() {
     const typeEv = String(data.get("type") || "");
     const messageText = String(data.get("message") || "");
 
-    const escapeHtml = (str: string) =>
-      str
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-
-    const htmlMessage = `
-      <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:#f8f1ec; padding:24px; color:#222;">
-        <div style="max-width:680px; margin:0 auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.06);">
-          <div style="background:linear-gradient(90deg,#f8f1ec 0%,#fff 100%); padding:24px 28px; border-bottom:1px solid #f1e9e2;">
-            <h1 style="margin:0; font-size:20px; color:#b57a2a;">Nouvelle demande de devis</h1>
-            <div style="color:#7a5b4a; margin-top:6px;">Le Bar à Magnets</div>
-          </div>
-
-          <div style="padding:20px 28px; color:#333;">
-            <h2 style="margin:0 0 12px 0; font-size:16px; color:#b57a2a;">Informations client</h2>
-
-            <table style="width:100%; border-collapse:collapse; font-size:14px; color:#333;">
-              <tbody>
-                <tr><td style="padding:8px 0; width:160px; color:#8b6b54;">Prénom</td><td style="padding:8px 0;">${escapeHtml(prenom)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Nom</td><td style="padding:8px 0;">${escapeHtml(nom)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Téléphone</td><td style="padding:8px 0;">${escapeHtml(telephone)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Email</td><td style="padding:8px 0;">${escapeHtml(email)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Date</td><td style="padding:8px 0;">${escapeHtml(date)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Nombre d'invités</td><td style="padding:8px 0;">${escapeHtml(invites)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Lieu</td><td style="padding:8px 0;">${escapeHtml(lieu)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Prestation souhaitée</td><td style="padding:8px 0;">${escapeHtml(prestation)}</td></tr>
-                <tr><td style="padding:8px 0; color:#8b6b54;">Type d'événement</td><td style="padding:8px 0;">${escapeHtml(typeEv)}</td></tr>
-              </tbody>
-            </table>
-
-            <div style="margin-top:18px;">
-              <h3 style="margin:0 0 8px 0; font-size:14px; color:#b57a2a;">Message du client</h3>
-              <div style="padding:12px; background:#fff6f2; border-radius:8px; color:#444; border:1px solid #f1e9e2;">${escapeHtml(messageText).replaceAll('\n','<br/>')}</div>
-            </div>
-
-            <div style="margin-top:18px; text-align:left;">
-              <a href="mailto:${encodeURIComponent(email)}" style="display:inline-block; padding:10px 16px; background:#b57a2a; color:#fff; text-decoration:none; border-radius:8px;">Répondre au client</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
+    const plainMessage = [
+      "Nouvelle demande de devis",
+      "",
+      `Prénom : ${prenom}`,
+      `Nom : ${nom}`,
+      `Téléphone : ${telephone}`,
+      `Email : ${email}`,
+      `Date : ${date}`,
+      `Nombre d'invités : ${invites}`,
+      `Lieu : ${lieu}`,
+      `Prestation souhaitée : ${prestation}`,
+      `Type d'événement : ${typeEv}`,
+      "",
+      "Message client :",
+      messageText || "-",
+    ].join("\n");
 
     const cleanData = {
       access_key,
       subject,
+      from_name,
+      email,
       prenom,
       nom,
       telephone,
-      email,
       date,
       invites,
       lieu,
       prestation,
       type: typeEv,
-      message: htmlMessage,
+      message: plainMessage,
     };
 
     try {
