@@ -62,6 +62,13 @@ const routeMeta: Record<string, { title: string; description: string; keywords: 
     keywords:
       "bar à magnets Gironde, animation mariage Gironde, magnets photo Gironde, animation événementielle Gironde",
   },
+  "/bar-a-magnets-montauban": {
+    title: "Bar à magnets Montauban | Animation mariage & événementielle",
+    description:
+      "Bar à magnets Montauban pour mariage et événementiel en Tarn-et-Garonne : magnets photo personnalisés et souvenirs invités premium.",
+    keywords:
+      "bar à magnets Montauban, animation mariage Montauban, magnets photo Montauban, animation événementielle Montauban, Tarn-et-Garonne",
+  },
   "/livre-dor-audio-mariage-toulouse": {
     title: "Livre d’or audio mariage Toulouse | Téléphone audio & vidéo",
     description:
