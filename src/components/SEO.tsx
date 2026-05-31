@@ -55,6 +55,13 @@ const routeMeta: Record<string, { title: string; description: string; keywords: 
     keywords:
       "bar à magnets Bordeaux, animation mariage Bordeaux, magnets photo Bordeaux, animation événementielle Bordeaux, bar à magnets Gironde",
   },
+  "/bar-a-magnets-gironde": {
+    title: "Bar à magnets Gironde | Animation mariage & événementielle",
+    description:
+      "Bar à magnets Gironde pour mariage et événementiel : magnets photo personnalisés, animation mariage Gironde et souvenirs invités premium.",
+    keywords:
+      "bar à magnets Gironde, animation mariage Gironde, magnets photo Gironde, animation événementielle Gironde",
+  },
   "/livre-dor-audio-mariage-toulouse": {
     title: "Livre d’or audio mariage Toulouse | Téléphone audio & vidéo",
     description:

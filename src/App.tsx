@@ -19,6 +19,7 @@ import AnimationAnniversaireToulouse from './pages/AnimationAnniversaireToulouse
 import AnimationBabyShowerToulouse from './pages/AnimationBabyShowerToulouse'
 import AnimationEvenementielleToulouse from './pages/AnimationEvenementielleToulouse'
 import BarAMagnetsBordeaux from './pages/BarAMagnetsBordeaux'
+import BarAMagnetsGironde from './pages/BarAMagnetsGironde'
 import BarAMagnetsOccitanie from './pages/BarAMagnetsOccitanie'
 import LivreDorAudioMariageToulouse from './pages/LivreDorAudioMariageToulouse'
 import LivreDorVideoMariageToulouse from './pages/LivreDorVideoMariageToulouse'
@@ -55,6 +56,10 @@ const routeDefinitions = [
   {
     path: '/bar-a-magnets-bordeaux',
     element: <BarAMagnetsBordeaux />,
+  },
+  {
+    path: '/bar-a-magnets-gironde',
+    element: <BarAMagnetsGironde />,
   },
   {
     path: '/livre-dor-audio-mariage-toulouse',
