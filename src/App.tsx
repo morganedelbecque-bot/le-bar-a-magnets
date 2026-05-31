@@ -20,6 +20,9 @@ import AnimationBabyShowerToulouse from './pages/AnimationBabyShowerToulouse'
 import AnimationEvenementielleToulouse from './pages/AnimationEvenementielleToulouse'
 import BarAMagnetsOccitanie from './pages/BarAMagnetsOccitanie'
 import LivreDorAudioMariageToulouse from './pages/LivreDorAudioMariageToulouse'
+import LivreDorVideoMariageToulouse from './pages/LivreDorVideoMariageToulouse'
+import TelephoneAudioMariageToulouse from './pages/TelephoneAudioMariageToulouse'
+import TelephoneVideoMariageToulouse from './pages/TelephoneVideoMariageToulouse'
 
 const normalizePath = (pathname: string) => pathname.replace(/\/+$|^\/\/$/g, '/')
 
@@ -51,6 +54,18 @@ const routeDefinitions = [
   {
     path: '/livre-dor-audio-mariage-toulouse',
     element: <LivreDorAudioMariageToulouse />,
+  },
+  {
+    path: '/livre-dor-video-mariage-toulouse',
+    element: <LivreDorVideoMariageToulouse />,
+  },
+  {
+    path: '/telephone-audio-mariage-toulouse',
+    element: <TelephoneAudioMariageToulouse />,
+  },
+  {
+    path: '/telephone-video-mariage-toulouse',
+    element: <TelephoneVideoMariageToulouse />,
   },
 ]
 
