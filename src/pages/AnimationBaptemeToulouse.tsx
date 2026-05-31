@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import heroImg from '@/assets/hero-stand.jpg'
+import heroImg from '@/assets/hero-stand.webp'
 import { ContactForm } from '@/components/ContactForm'
 import { Gallery } from '@/components/Gallery'
 
@@ -12,7 +12,7 @@ export default function AnimationBaptemeToulouse() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <img src={heroImg} alt="Animation baptême à Toulouse" className="absolute inset-0 w-full h-full object-cover animate-slow-zoom" />
+        <img src={heroImg} alt="Animation baptême à Toulouse" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover animate-slow-zoom" />
         <div className="absolute inset-0 bg-black/36" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-28 text-center">

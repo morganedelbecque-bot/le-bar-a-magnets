@@ -1,4 +1,4 @@
-import giftImage from "../assets/file_0000000009fc71f59cf3bedad241fac6.png";
+import giftImage from "../assets/file_0000000009fc71f59cf3bedad241fac6.webp";
 
 export default function GiftOrder() {
   return (

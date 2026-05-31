@@ -1,4 +1,4 @@
-import ambiance from "@/assets/hero-stand.jpg";
+import ambiance from "@/assets/hero-stand.webp";
 
 const reasons = [
   {

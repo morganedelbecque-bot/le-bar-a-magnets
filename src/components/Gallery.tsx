@@ -1,4 +1,4 @@
-import hero from "@/assets/hero-stand.jpg";
+import hero from "@/assets/hero-stand.webp";
 import magnets from "@/assets/magnets-closeup.jpg";
 import making from "@/assets/making-magnets.jpg";
 import guests from "@/assets/guests.jpg";

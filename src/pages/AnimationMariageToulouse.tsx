@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import heroImg from '@/assets/hero-stand.jpg'
+import heroImg from '@/assets/hero-stand.webp'
 import { Gallery } from '@/components/Gallery'
 import { ContactForm } from '@/components/ContactForm'
 
@@ -15,6 +15,7 @@ export default function AnimationMariageToulouse() {
         <img
           src={heroImg}
           alt="Animation mariage haut de gamme à Toulouse"
+          fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
         />
         <div className="absolute inset-0 bg-black/36" />

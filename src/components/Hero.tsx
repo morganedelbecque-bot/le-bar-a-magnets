@@ -1,4 +1,5 @@
-import heroImg from "@/assets/hero-stand.jpg";
+import heroImg from "@/assets/hero-stand.webp";
+import heroImgMobile from "@/assets/hero-stand-mobile.webp";
 
 const heroPetals = [
   { left: "2%", top: "-10%", width: 14, height: 20, rotation: 20, fallDuration: 18, swayDuration: 6.8, fallDelay: -8.4, swayDelay: -3.2, background: "rgba(236,158,170,0.85)" },
@@ -36,13 +37,17 @@ export function Hero() {
   return (
     <section className="relative min-h-screen grid place-items-center overflow-hidden px-4 sm:px-6">
       <div className="absolute inset-0">
+        <picture className="block h-full w-full">
+          <source media="(max-width: 767px)" srcSet={heroImgMobile} />
         <img
           src={heroImg}
           alt="Bar à magnets Toulouse pour animation mariage premium en Occitanie"
           width="1800"
           height="1200"
+          fetchPriority="high"
           className="w-full h-full object-cover animate-slow-zoom"
         />
+        </picture>
         <div className="absolute inset-0 bg-black/30" />
 
         <div className="absolute inset-0 pointer-events-none">

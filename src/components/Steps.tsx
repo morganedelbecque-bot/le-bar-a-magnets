@@ -1,6 +1,6 @@
 import stepMagnet from "../assets/step-magnet.jpg";
 import stepPress from "../assets/step-press.jpg";
-import stepQr from "../assets/step-qr.jpg.png";
+import stepQr from "../assets/step-qr.webp";
 import stepSelfie from "../assets/step-selfie.jpg";
 
 const steps = [
