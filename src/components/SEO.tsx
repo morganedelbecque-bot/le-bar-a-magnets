@@ -48,6 +48,13 @@ const routeMeta: Record<string, { title: string; description: string; keywords: 
       "Le Bar à Magnets intervient à Toulouse, Saint-Jory et en Occitanie pour des animations premium et souvenirs invités personnalisés.",
     keywords: "bar à magnets Occitanie, bar à magnets Toulouse, animation mariage Occitanie",
   },
+  "/bar-a-magnets-bordeaux": {
+    title: "Bar à magnets Bordeaux | Animation mariage & événementielle",
+    description:
+      "Bar à magnets Bordeaux pour mariage et événementiel : magnets photo personnalisés, animation mariage Bordeaux et souvenirs invités premium en Gironde.",
+    keywords:
+      "bar à magnets Bordeaux, animation mariage Bordeaux, magnets photo Bordeaux, animation événementielle Bordeaux, bar à magnets Gironde",
+  },
   "/livre-dor-audio-mariage-toulouse": {
     title: "Livre d’or audio mariage Toulouse | Téléphone audio & vidéo",
     description:

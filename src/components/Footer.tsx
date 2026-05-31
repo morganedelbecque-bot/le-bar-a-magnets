@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#3a2623] to-[#422b27] text-[#f3e7dc] py-16 px-6 relative z-60">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-10 mb-12">
+        <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="font-serif font-light text-2xl mb-2 text-[#f3e7dc]">
               Le Bar à Magnets
@@ -84,6 +84,30 @@ export function Footer() {
                 <a href="#contact" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Devis">
                   Devis
                 </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.45em] text-[#d9b56d] mb-4 font-medium">
+              Zones desservies
+            </div>
+
+            <ul className="space-y-2 text-sm text-[#d8c3b5]">
+              <li>
+                <a href="/bar-a-magnets-bordeaux" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Bordeaux">Bar à magnets Bordeaux</a>
+              </li>
+
+              <li>
+                <a href="/bar-a-magnets-gironde" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Gironde">Bar à magnets Gironde</a>
+              </li>
+
+              <li>
+                <a href="/bar-a-magnets-montauban" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Montauban">Bar à magnets Montauban</a>
+              </li>
+
+              <li>
+                <a href="/bar-a-magnets-albi" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Albi">Bar à magnets Albi</a>
               </li>
             </ul>
           </div>
