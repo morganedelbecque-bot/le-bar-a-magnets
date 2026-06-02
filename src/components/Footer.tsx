@@ -1,3 +1,5 @@
+import mariagesNetLogo from "@/assets/mariages-net-logo.png";
+
 export function Footer() {
   return (
     <footer className="bg-gradient-to-r from-[#3a2623] to-[#422b27] text-[#f3e7dc] py-16 px-6 relative z-60">
@@ -123,6 +125,22 @@ export function Footer() {
               aria-label="Email Le Bar à Magnets"
             >
               lebaramagnets@outlook.com
+            </a>
+
+            <a
+              href="https://www.mariages.net/animation-mariage/le-bar-a-magnets--e423173"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 mx-auto md:mx-0 flex w-fit flex-col items-center md:items-start gap-2 rounded border border-[#d9b56d]/25 bg-[#f3e7dc]/5 px-4 py-3 text-center md:text-left text-sm text-[#d8c3b5] hover:border-[#d9b56d]/50 hover:bg-[#f3e7dc]/10 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto"
+              aria-label="Retrouvez Le Bar à Magnets sur Mariages.net"
+            >
+              <span>Retrouvez Le Bar à Magnets sur Mariages.net</span>
+              <img
+                src={mariagesNetLogo}
+                alt="Mariages.net"
+                className="w-[100px] h-auto"
+                loading="lazy"
+              />
             </a>
 
             <p className="text-sm text-[#d8c3b5]/90 mt-3">
