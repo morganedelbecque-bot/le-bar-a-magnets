@@ -111,6 +111,10 @@ export function Footer() {
               <li>
                 <a href="/bar-a-magnets-albi" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Albi">Bar à magnets Albi</a>
               </li>
+
+              <li>
+                <a href="/bar-a-magnets-haute-garonne" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Bar à magnets Haute-Garonne">Bar à magnets Haute-Garonne</a>
+              </li>
             </ul>
           </div>
 
