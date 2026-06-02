@@ -21,6 +21,7 @@ import AnimationEvenementielleToulouse from './pages/AnimationEvenementielleToul
 import BarAMagnetsBordeaux from './pages/BarAMagnetsBordeaux'
 import BarAMagnetsGironde from './pages/BarAMagnetsGironde'
 import BarAMagnetsMontauban from './pages/BarAMagnetsMontauban'
+import BarAMagnetsAlbi from './pages/BarAMagnetsAlbi'
 import BarAMagnetsOccitanie from './pages/BarAMagnetsOccitanie'
 import LivreDorAudioMariageToulouse from './pages/LivreDorAudioMariageToulouse'
 import LivreDorVideoMariageToulouse from './pages/LivreDorVideoMariageToulouse'
@@ -65,6 +66,10 @@ const routeDefinitions = [
   {
     path: '/bar-a-magnets-montauban',
     element: <BarAMagnetsMontauban />,
+  },
+  {
+    path: '/bar-a-magnets-albi',
+    element: <BarAMagnetsAlbi />,
   },
   {
     path: '/livre-dor-audio-mariage-toulouse',
