@@ -42,7 +42,7 @@ export function Footer() {
 
               <li>
                 <a href="/animation-mariage-toulouse" className="block py-2 hover:text-[#f3e7dc] transition-colors duration-200 relative z-70 pointer-events-auto" aria-label="Animation mariage Toulouse">
-                  Animation de mariage à Toulouse
+                  Animation mariage Toulouse
                 </a>
               </li>
 
