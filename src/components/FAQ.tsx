@@ -70,6 +70,33 @@ const guestBookFaqs = [
   },
 ];
 
+const ecocupFaqs = [
+  {
+    q: "Peut-on personnaliser les éco-cups avec nos prénoms et la date ?",
+    a: "Oui. Vos prénoms, vos initiales et la date de votre événement peuvent être intégrés à une création conçue pour s’accorder avec votre univers.",
+  },
+  {
+    q: "Peut-on ajouter une photo sur les éco-cups ?",
+    a: "Oui, une photo peut être intégrée selon sa qualité et le rendu souhaité. Nous vous conseillons sur la mise en page la plus lisible et élégante.",
+  },
+  {
+    q: "Les éco-cups sont-ils réutilisables ?",
+    a: "Oui. Ces gobelets sont pensés pour être lavés et réutilisés, afin que vos invités conservent un souvenir pratique de votre événement.",
+  },
+  {
+    q: "Peut-on choisir les couleurs et le thème ?",
+    a: "Oui. Les couleurs, les motifs et le style graphique sont adaptés à votre décoration, qu’elle soit florale, minimaliste, romantique ou colorée.",
+  },
+  {
+    q: "Livrez-vous partout en France ?",
+    a: "Oui, la livraison est possible partout en France. Ses modalités sont précisées dans votre devis selon la quantité et la destination.",
+  },
+  {
+    q: "Peut-on commander des éco-cups sans réserver le Bar à Magnets ?",
+    a: "Oui. Les éco-cups personnalisés constituent une prestation indépendante et peuvent être commandés sans réserver une animation Bar à Magnets.",
+  },
+];
+
 const faqGroups = [
   {
     title: "Le Bar à Magnets",
@@ -78,6 +105,10 @@ const faqGroups = [
   {
     title: "Livre d’or audio & vidéo",
     items: guestBookFaqs,
+  },
+  {
+    title: "Éco-cups personnalisés",
+    items: ecocupFaqs,
   },
 ];
 
