@@ -17,6 +17,7 @@ export function Navbar() {
     { href: "#galerie", label: "Galerie" },
     { href: "#tarifs", label: "Tarifs" },
     { href: "#livre-or-audio-video", label: "Audio & Vidéo" },
+    { href: "/#eco-cups", label: "Éco-cups" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Devis" },
   ];

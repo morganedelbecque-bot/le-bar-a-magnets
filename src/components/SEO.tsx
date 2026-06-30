@@ -7,9 +7,9 @@ const routeMeta: Record<string, { title: string; description: string; keywords: 
   "/": {
     title: "Le Bar à Magnets | Animation mariage Toulouse & livre d’or audio vidéo",
     description:
-      "Animation premium pour mariage et événements à Toulouse : bar à magnets, livre d’or audio, livre d’or vidéo, téléphone audio mariage et souvenirs invités en Occitanie.",
+      "Animation premium et éco-cups personnalisés pour mariage à Toulouse : bar à magnets, livre d’or audio et vidéo, gobelets personnalisés et souvenirs invités.",
     keywords:
-      "livre d’or audio mariage Toulouse, livre d’or vidéo mariage Toulouse, animation mariage Toulouse, animation événementielle Toulouse, animation invités mariage, téléphone audio mariage, téléphone vidéo mariage, bar à magnets Toulouse, animation premium mariage",
+      "livre d’or audio mariage Toulouse, livre d’or vidéo mariage Toulouse, animation mariage Toulouse, bar à magnets Toulouse, éco-cup personnalisé mariage, gobelet personnalisé mariage, éco-cup personnalisé Toulouse, cadeau invité mariage, éco-cup mariage personnalisé",
   },
   "/animation-mariage-toulouse": {
     title: "Animation mariage Toulouse | Bar à magnets premium",
@@ -148,6 +148,19 @@ const structuredData = [
   },
 ];
 
+const ecocupFaqData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    ["Peut-on personnaliser les éco-cups avec nos prénoms et la date ?", "Oui, les prénoms, initiales et la date peuvent être intégrés à une création sur mesure."],
+    ["Peut-on ajouter une photo sur les éco-cups ?", "Oui, une photo peut être ajoutée selon sa qualité et le rendu souhaité."],
+    ["Les éco-cups sont-ils réutilisables ?", "Oui, les gobelets sont lavables et conçus pour être réutilisés."],
+    ["Peut-on choisir les couleurs et le thème ?", "Oui, les couleurs et le thème graphique sont adaptés à la décoration de l’événement."],
+    ["Livrez-vous partout en France ?", "Oui, la livraison est possible partout en France selon les modalités précisées dans le devis."],
+    ["Peut-on commander des éco-cups sans réserver le Bar à Magnets ?", "Oui, les éco-cups personnalisés peuvent être commandés comme une prestation indépendante."],
+  ].map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })),
+};
+
 function upsertMeta(selector: string, attrs: Record<string, string>) {
   let element = document.head.querySelector<HTMLMetaElement>(selector);
 
@@ -200,7 +213,7 @@ export function SEO() {
       const schema = document.createElement("script");
       schema.id = "structured-data";
       schema.type = "application/ld+json";
-      schema.text = JSON.stringify(structuredData);
+      schema.text = JSON.stringify(pathname === "/" ? [...structuredData, ecocupFaqData] : structuredData);
       document.head.appendChild(schema);
     };
 

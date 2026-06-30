@@ -7,6 +7,7 @@ import { WhyUs } from './components/WhyUs'
 import { FAQ } from './components/FAQ'
 import { ContactForm } from './components/ContactForm'
 import { AudioVideoGuestBook } from './components/AudioVideoGuestBook'
+import { EcoCups } from './components/EcoCups'
 import GiftOrder from './components/GiftOrder'
 import { PricingCards } from './components/PricingCards'
 import { Navbar } from './components/Navbar'
@@ -120,6 +121,7 @@ export function App() {
           <PricingCards />
           <Gallery />
           <AudioVideoGuestBook />
+          <EcoCups />
           <ContactForm />
           <FAQ />
         </>
