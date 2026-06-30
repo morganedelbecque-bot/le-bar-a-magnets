@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, CalendarHeart, Check, Clock3, FileCheck2, Flower2, Image, MessagesSquare, Palette, PartyPopper, Recycle, Ruler, ShieldCheck, Signature, Sparkles, SwatchBook, Truck, WandSparkles } from 'lucide-react'
+import { ArrowRight, CalendarHeart, Check, Clock3, FileCheck2, Flower2, Image, Palette, PartyPopper, PencilLine, Recycle, ShieldCheck, Signature, Sparkles, SwatchBook, Truck, WandSparkles } from 'lucide-react'
 import fallbackHero from '@/assets/livre-audio-hero.webp'
 import fallbackTable from '@/assets/livre-audio-setup.jpg'
 import fallbackGuests from '@/assets/livre-video-guests.jpg'
@@ -181,26 +181,59 @@ export function EcoCups() {
         <div className="pointer-events-none absolute bottom-8 right-10 h-px w-20 bg-gradient-to-l from-[#c89b6d]/50 to-transparent" />
 
         <p className="mb-4 text-[11px] uppercase tracking-[0.4em] text-gold">Tarifs personnalisés</p>
-        <h2 className="mx-auto max-w-4xl font-display text-3xl leading-tight text-[#2b2523] md:text-5xl">Une proposition imaginée pour votre événement, sans formule imposée</h2>
+        <h2 className="mx-auto max-w-4xl font-display text-3xl leading-tight text-[#2b2523] md:text-5xl">Des tarifs adaptés à votre projet</h2>
         <div className="mx-auto my-7 flex items-center justify-center gap-3" aria-hidden="true">
           <span className="h-px w-12 bg-gradient-to-r from-transparent to-[#c89b6d]" />
           <span className="h-1.5 w-1.5 rotate-45 border border-[#c89b6d]" />
           <span className="h-px w-12 bg-gradient-to-l from-transparent to-[#c89b6d]" />
         </div>
-        <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#5f514d] md:text-lg">Chaque projet est <span className="font-medium text-[#b98767]">personnalisé</span> afin de s’adapter à votre <span className="font-medium text-[#b98767]">thème</span>, vos <span className="font-medium text-[#b98767]">couleurs</span>, les quantités souhaitées et les options choisies.</p>
+        <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#5f514d] md:text-lg">Chaque commande est entièrement personnalisée selon la quantité souhaitée, votre design et vos besoins.</p>
 
-        <div className="mt-10 grid gap-7 border-t border-[#eaded6] pt-9 md:grid-cols-3 md:gap-0">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {[
-            { title: 'Sur mesure', description: 'Un devis adapté à vos besoins.', icon: Ruler },
-            { title: 'Personnalisation', description: 'Chaque création est imaginée selon votre événement.', icon: Palette },
-            { title: 'Accompagnement', description: 'Nous vous conseillons jusqu’à la validation de votre maquette.', icon: MessagesSquare },
-          ].map(({ title, description, icon: Icon }, index) => (
-            <div key={title} className={`relative px-4 transition-all duration-700 md:px-8 ${index > 0 ? 'md:border-l md:border-[#e4d2c5]' : ''} ${pricingVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{ transitionDelay: `${180 + index * 100}ms` }}>
-              <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full border border-[#e3cdbf] bg-[#f8eae4] text-[#b98767]">
-                <Icon aria-hidden="true" size={20} strokeWidth={1.5} />
-              </div>
-              <h3 className="font-serif text-xl text-[#2d1d1a]">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#6b5a54]">{description}</p>
+            { quantity: '25 éco-cups', price: 'À partir de 99 €' },
+            { quantity: '50 éco-cups', price: 'À partir de 149 €' },
+            { quantity: '100 éco-cups', price: 'À partir de 219 €', featured: true },
+            { quantity: '150 éco-cups', price: 'À partir de 289 €' },
+            { quantity: '200 éco-cups et +', price: 'Sur devis' },
+          ].map(({ quantity, price, featured }, index) => (
+            <article key={quantity} className={`relative flex min-h-[180px] flex-col items-center justify-center rounded-[24px] border px-4 py-7 transition-all duration-700 hover:-translate-y-1.5 hover:shadow-[0_16px_35px_rgba(91,65,55,0.12)] ${featured ? 'border-[#d3ad72] bg-gradient-to-b from-[#fffaf1] to-[#f8e8dc] shadow-[0_14px_35px_rgba(185,138,93,0.16)]' : 'border-[#eaded6] bg-white/75 shadow-[0_9px_25px_rgba(91,65,55,0.06)]'} ${pricingVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`} style={{ transitionDelay: `${120 + index * 70}ms` }}>
+              {featured && <span className="absolute -top-3 rounded-full bg-[#c89b6d] px-4 py-1.5 text-[10px] font-medium uppercase tracking-[0.14em] text-white shadow-sm">Le plus choisi</span>}
+              <h3 className="font-serif text-xl leading-tight text-[#2d1d1a]">{quantity}</h3>
+              <div className="my-4 h-px w-9 bg-[#c89b6d]/55" />
+              <p className="text-sm font-medium leading-6 text-[#9a6f4f]">{price}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 grid gap-6 border-y border-[#eaded6] py-8 md:grid-cols-3 md:gap-0">
+          {[
+            { label: 'Personnalisation incluse', icon: PencilLine },
+            { label: 'Maquette offerte avant impression', icon: FileCheck2 },
+            { label: 'Livraison partout en France', icon: Truck },
+          ].map(({ label, icon: Icon }, index) => (
+            <div key={label} className={`flex items-center justify-center gap-3 px-5 text-sm text-[#5f514d] ${index > 0 ? 'md:border-l md:border-[#dfcfc4]' : ''}`}>
+              <Icon aria-hidden="true" size={19} strokeWidth={1.5} className="shrink-0 text-[#b58a5c]" />
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-6 text-sm text-[#76645d]">Frais de port : à partir de 5,90 € partout en France.</p>
+        <a href="#contact" className="group mt-8 inline-flex items-center justify-center gap-3 rounded-full bg-[#c89b6d] px-9 py-4 text-sm uppercase tracking-[0.18em] text-white shadow-[0_12px_28px_rgba(185,138,93,0.28)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#b98a5d] hover:shadow-[0_18px_36px_rgba(185,138,93,0.34)] md:px-12 md:py-5">
+          Demander un devis personnalisé
+          <ArrowRight aria-hidden="true" size={18} strokeWidth={1.7} className="transition-transform duration-500 group-hover:translate-x-1" />
+        </a>
+
+        <div className="mx-auto mt-7 flex max-w-2xl flex-col items-center justify-center gap-4 text-sm text-[#675750] sm:flex-row sm:gap-0">
+          {[
+            { label: 'Réponse sous 24 h', icon: Clock3 },
+            { label: 'Devis gratuit', icon: FileCheck2 },
+            { label: 'Sans engagement', icon: ShieldCheck },
+          ].map(({ label, icon: Icon }, index) => (
+            <div key={label} className={`flex items-center gap-2 px-5 ${index > 0 ? 'sm:border-l sm:border-[#dfcfc4]' : ''}`}>
+              <Icon aria-hidden="true" size={17} strokeWidth={1.5} className="text-[#b58a5c]" />
+              <span>{label}</span>
             </div>
           ))}
         </div>

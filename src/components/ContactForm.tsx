@@ -19,8 +19,10 @@ const prestationOptions = [
   "Livre d’or audio premium",
   "Livre d’or audio & vidéo",
   "Livre d’or audio & vidéo premium",
+  "Éco-cups personnalisés",
   "Bar à magnets + livre d’or audio",
   "Bar à magnets + livre d’or audio & vidéo",
+  "Bar à magnets + éco-cups personnalisés",
   "Je ne sais pas encore",
 ];
 
