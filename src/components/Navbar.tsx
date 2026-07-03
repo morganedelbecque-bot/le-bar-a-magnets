@@ -3,12 +3,23 @@ import { useEffect, useState } from "react";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState(() => window.location.hash);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const updateActiveHash = () => setActiveHash(window.location.hash);
+    window.addEventListener("hashchange", updateActiveHash);
+    window.addEventListener("popstate", updateActiveHash);
+    return () => {
+      window.removeEventListener("hashchange", updateActiveHash);
+      window.removeEventListener("popstate", updateActiveHash);
+    };
   }, []);
 
   const nav = [
@@ -31,7 +42,7 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex items-center justify-between h-20">
-        <a href="/" className="flex flex-col leading-none">
+        <a href="/" className="flex flex-col leading-none transition-colors duration-300">
           <span className="font-display text-[1.05rem] font-medium tracking-[0.06em] text-cream">
             Le Bar à Magnets
           </span>
@@ -41,19 +52,25 @@ export function Navbar() {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {nav.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className={`text-sm tracking-wide ${scrolled ? "text-foreground" : "text-cream/90"} hover:text-cream relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full`}
-            >
-              {n.label}
-            </a>
-          ))}
+          {nav.map((n) => {
+            const hash = n.href.slice(n.href.indexOf("#"));
+            const isActive = activeHash === hash;
+            return (
+              <a
+                key={n.href}
+                href={n.href}
+                aria-current={isActive ? "page" : undefined}
+                onClick={() => setActiveHash(hash)}
+                className={`relative text-sm tracking-wide transition-colors duration-300 ease-out after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:bg-[#c89b5c] after:transition-transform after:duration-300 after:ease-out hover:text-[#c89b5c] hover:after:scale-x-100 ${scrolled ? "text-foreground" : "text-cream/90"} ${isActive ? "text-[#c89b5c] after:scale-x-100" : "after:scale-x-0"}`}
+              >
+                {n.label}
+              </a>
+            );
+          })}
 
           <a
             href="#contact"
-            className="px-8 py-2.5 rounded-full bg-[#2d1f1c] text-[#f6eadb] text-sm font-medium tracking-wide shadow-sm transition-colors duration-200 hover:bg-[#3b2925]"
+            className="px-8 py-2.5 rounded-full bg-[#2d1f1c] text-[#f6eadb] text-sm font-medium tracking-wide shadow-sm transition-colors duration-300 ease-out hover:bg-[#3b2925] hover:text-[#d9b678]"
           >
             Demander un devis
           </a>
@@ -87,16 +104,21 @@ export function Navbar() {
       {open && (
         <div className="md:hidden bg-cream/95 backdrop-blur-md border-t border-cream/40 animate-fade-in">
           <div className="px-6 py-6 flex flex-col gap-4">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                onClick={() => setOpen(false)}
-                className="text-base py-2 border-b border-border/50"
-              >
-                {n.label}
-              </a>
-            ))}
+            {nav.map((n) => {
+              const hash = n.href.slice(n.href.indexOf("#"));
+              const isActive = activeHash === hash;
+              return (
+                <a
+                  key={n.href}
+                  href={n.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => { setActiveHash(hash); setOpen(false); }}
+                  className={`relative w-fit py-2 text-base transition-colors duration-300 ease-out after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-left after:bg-[#c89b5c] after:transition-transform after:duration-300 after:ease-out hover:text-[#c89b5c] hover:after:scale-x-100 ${isActive ? "text-[#c89b5c] after:scale-x-100" : "after:scale-x-0"}`}
+                >
+                  {n.label}
+                </a>
+              );
+            })}
           </div>
         </div>
       )}

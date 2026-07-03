@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
+import { ArrowRight, Check, Clock3, Handshake, LockKeyhole, Sparkles } from "lucide-react";
 import chalkboard from "@/assets/chalkboard.jpg";
 
 const eventTypes = [
@@ -101,7 +102,7 @@ export function ContactForm() {
         body: JSON.stringify(cleanData),
       });
 
-      let json: any = null;
+      let json: { success?: boolean; [key: string]: unknown } | null = null;
       try {
         json = await res.json();
       } catch (e) {
@@ -157,6 +158,22 @@ export function ContactForm() {
             reviendrons rapidement vers vous avec une proposition sur mesure.
           </p>
 
+          <div className="mt-8 grid gap-3 sm:grid-cols-2" aria-label="Nos engagements">
+            {[
+              { label: "Devis gratuit", icon: Sparkles },
+              { label: "Réponse personnalisée sous 24 à 48 h", icon: Clock3 },
+              { label: "Sans engagement", icon: Handshake },
+              { label: "Vos informations restent confidentielles", icon: LockKeyhole },
+            ].map(({ label, icon: Icon }) => (
+              <div key={label} className="flex min-h-14 items-center gap-3 rounded-2xl border border-[#decdbf]/70 bg-white/55 px-4 py-3 text-sm text-[#5d4c44] shadow-[0_7px_22px_rgba(77,55,44,0.05)] backdrop-blur-sm">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f4e7d8] text-[#b48754]">
+                  <Icon aria-hidden="true" size={16} strokeWidth={1.6} />
+                </span>
+                <span className="leading-5">{label}</span>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-10 space-y-4 text-sm">
             <div className="flex items-start gap-3">
               <span className="text-gold mt-0.5">✦</span>
@@ -181,6 +198,10 @@ export function ContactForm() {
         </div>
 
         <div className="bg-white/95 p-10 md:p-12 rounded-[32px] shadow-soft border border-border/20 backdrop-blur-sm">
+          <p className="mb-8 border-b border-[#eadfd5] pb-6 font-serif text-lg leading-relaxed text-[#5d4c44]">
+            Remplissez ce formulaire en moins de 2 minutes. Nous reviendrons rapidement vers vous avec une proposition personnalisée.
+          </p>
+
           <form action="https://api.web3forms.com/submit" method="POST" onSubmit={onSubmit} className="space-y-6">
             <input type="hidden" name="access_key" value="340740a0-3b6b-4e5a-8894-945f17ee94e6" />
             <input type="hidden" name="subject" value="Nouvelle demande de devis - Le Bar à Magnets" />
@@ -207,7 +228,7 @@ export function ContactForm() {
             <div>
               <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">Prestation souhaitée</label>
 
-              <select name="prestation" required className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-sm transition-colors">
+              <select name="prestation" required className="w-full rounded-2xl border border-[#dfd2c7] bg-[#fdf9f3] px-4 py-3.5 text-sm shadow-[0_4px_14px_rgba(73,53,43,0.04)] outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d4b98c] focus:-translate-y-0.5 focus:border-[#c89b5c] focus:ring-2 focus:ring-[#c89b5c]/15">
                 <option value="">Choisir…</option>
                 {prestationOptions.map((prestation) => (
                   <option key={prestation}>{prestation}</option>
@@ -218,7 +239,7 @@ export function ContactForm() {
             <div>
               <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">Type d'événement</label>
 
-              <select name="type" required className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-sm transition-colors">
+              <select name="type" required className="w-full rounded-2xl border border-[#dfd2c7] bg-[#fdf9f3] px-4 py-3.5 text-sm shadow-[0_4px_14px_rgba(73,53,43,0.04)] outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d4b98c] focus:-translate-y-0.5 focus:border-[#c89b5c] focus:ring-2 focus:ring-[#c89b5c]/15">
                 <option value="">Choisir…</option>
                 {eventTypes.map((t) => (
                   <option key={t}>{t}</option>
@@ -229,12 +250,22 @@ export function ContactForm() {
             <div>
               <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">Message</label>
 
-              <textarea name="message" rows={4} placeholder="Parlez-nous de votre événement…" className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-2.5 text-sm transition-colors resize-none" />
+              <textarea name="message" rows={4} placeholder="Parlez-nous de votre événement…" className="w-full resize-none rounded-2xl border border-[#dfd2c7] bg-[#fdf9f3] px-4 py-3.5 text-sm shadow-[0_4px_14px_rgba(73,53,43,0.04)] outline-none transition-all duration-300 placeholder:text-foreground/35 hover:-translate-y-0.5 hover:border-[#d4b98c] focus:-translate-y-0.5 focus:border-[#c89b5c] focus:ring-2 focus:ring-[#c89b5c]/15" />
             </div>
 
-            <button type="submit" disabled={status === "sending"} className="w-full mt-4 px-8 py-4 rounded-full gradient-gold text-foreground text-sm uppercase tracking-[0.25em] shadow-gold hover:shadow-soft transition-all duration-500 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed relative z-30 pointer-events-auto touch-auto">
-              {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}
+            <button type="submit" disabled={status === "sending"} className="group relative z-30 mt-4 flex min-h-16 w-full touch-auto items-center justify-center gap-3 rounded-full px-8 py-5 gradient-gold text-sm uppercase tracking-[0.22em] text-foreground shadow-[0_12px_28px_rgba(190,145,80,0.24)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_34px_rgba(190,145,80,0.32)] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 pointer-events-auto">
+              <span>{status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}</span>
+              {status !== "sending" && <ArrowRight aria-hidden="true" size={18} strokeWidth={1.8} className="transition-transform duration-300 group-hover:translate-x-1.5" />}
             </button>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-foreground/60" aria-label="Garanties de la demande de devis">
+              {["Devis gratuit", "Sans engagement", "Réponse rapide"].map((item) => (
+                <span key={item} className="inline-flex items-center gap-1.5">
+                  <Check aria-hidden="true" size={14} strokeWidth={2} className="text-[#b48754]" />
+                  {item}
+                </span>
+              ))}
+            </div>
 
             {status === "sent" && (
               <p className="text-center text-sm text-primary animate-fade-in">✦ Merci ! Votre demande a bien été envoyée. Nous revenons vers vous très vite.</p>
@@ -267,7 +298,7 @@ function Field({
     <div>
       <label className="block text-[11px] uppercase tracking-[0.2em] text-foreground/60 mb-2">{label}</label>
 
-      <input type={type} name={name} required={required} min={min} className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-2.5 text-sm transition-colors" />
+      <input type={type} name={name} required={required} min={min} className="w-full rounded-2xl border border-[#dfd2c7] bg-[#fdf9f3] px-4 py-3.5 text-sm shadow-[0_4px_14px_rgba(73,53,43,0.04)] outline-none transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d4b98c] focus:-translate-y-0.5 focus:border-[#c89b5c] focus:ring-2 focus:ring-[#c89b5c]/15" />
     </div>
   );
 }

@@ -32,12 +32,27 @@ const customizationOptions = [
 ]
 export function EcoCups() {
   const [active, setActive] = useState<number | null>(null)
+  const [customizationVisible, setCustomizationVisible] = useState(false)
   const [benefitsVisible, setBenefitsVisible] = useState(false)
   const [pricingVisible, setPricingVisible] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(false)
+  const customizationSection = useRef<HTMLElement>(null)
   const benefitsSection = useRef<HTMLElement>(null)
   const pricingSection = useRef<HTMLElement>(null)
   const ctaSection = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const section = customizationSection.current
+    if (!section) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setCustomizationVisible(true)
+        observer.disconnect()
+      }
+    }, { threshold: 0.12 })
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     const section = benefitsSection.current
@@ -102,11 +117,11 @@ export function EcoCups() {
       </div>
     </section>
 
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#fcf1ec] via-[#fbf6f1] to-[#f5e5e1] px-6 py-20 md:px-10 md:py-28">
-      <div className="pointer-events-none absolute -left-32 top-16 -z-10 h-80 w-80 rounded-full bg-[#e8c7c0]/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 -z-10 h-96 w-96 rounded-full bg-[#d9b56d]/10 blur-3xl" />
+    <section ref={customizationSection} className="relative isolate overflow-hidden bg-gradient-to-br from-[#fffdf8] via-[#fbf5ea] to-[#f7eee2] px-6 py-16 md:px-10 md:py-20">
+      <div className="pointer-events-none absolute -left-32 top-12 -z-10 h-80 w-80 rounded-full bg-[#e9d3bf]/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 bottom-6 -z-10 h-96 w-96 rounded-full bg-[#d9b56d]/10 blur-3xl" />
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-12 max-w-3xl text-center animate-fade-in md:mb-14">
+        <div className={`mx-auto mb-10 max-w-3xl text-center transition-all duration-700 md:mb-12 ${customizationVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
           <p className="mb-4 text-[11px] uppercase tracking-[0.4em] text-gold">Création sur mesure</p>
           <h2 className="font-display text-3xl leading-tight text-[#2b2523] md:text-5xl">Un gobelet personnalisé à l’image de votre événement</h2>
           <div className="gold-divider mx-auto my-6" />
@@ -114,24 +129,25 @@ export function EcoCups() {
           <p className="mt-4 text-base leading-relaxed text-[#5f514d]">Cette attention durable convient aux mariages, anniversaires, baptêmes, baby showers et événements d’entreprise.</p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {customizationOptions.map(({ title, description, icon: Icon }, index) => (
-            <article key={title} className="group animate-fade-in rounded-[30px] border border-white/80 bg-white/70 p-7 shadow-soft backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-[#dfc69a]/70 hover:bg-white/90 hover:shadow-[0_20px_50px_rgba(88,57,47,0.12)] md:p-8" style={{ animationDelay: `${index * 70}ms` }}>
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#ead8cc] bg-gradient-to-br from-[#f9ece7] to-[#f2dfd8] text-[#b98767] shadow-sm transition-transform duration-500 group-hover:scale-105">
+            <article key={title} className={`group flex min-h-[230px] flex-col rounded-[24px] border border-white/90 bg-white/75 p-7 shadow-[0_12px_34px_rgba(87,62,46,0.07)] backdrop-blur-sm transition-all duration-700 hover:-translate-y-2 hover:scale-[1.015] hover:border-[#dfc69a]/70 hover:bg-white/95 hover:shadow-[0_22px_48px_rgba(88,57,47,0.13)] md:min-h-[250px] md:p-9 ${customizationVisible ? 'translate-y-0 opacity-100' : 'translate-y-7 opacity-0'}`} style={{ transitionDelay: `${100 + index * 75}ms` }}>
+              <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-[20px] border border-[#ead8cc] bg-gradient-to-br from-[#fffaf3] to-[#f2e1d5] text-[#b98767] shadow-[0_8px_20px_rgba(137,94,67,0.08)] transition-transform duration-500 group-hover:scale-110">
                 <Icon aria-hidden="true" size={25} strokeWidth={1.5} />
               </div>
-              <h3 className="font-serif text-2xl leading-tight text-[#2d1d1a]">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-[#6b5a54]">{description}</p>
+              <h3 className="font-serif text-[1.65rem] leading-tight text-[#2d1d1a]">{title}</h3>
+              <div className="my-4 h-px w-10 bg-gradient-to-r from-[#c89b6d]/70 to-transparent" />
+              <p className="text-[15px] leading-7 text-[#6b5a54]">{description}</p>
             </article>
           ))}
         </div>
 
-        <div className="mx-auto mt-10 flex max-w-3xl animate-fade-in flex-col items-center text-center">
-          <div className="w-full rounded-[24px] border border-[#e7d2c4] bg-white/60 px-6 py-5 font-serif text-lg leading-relaxed text-[#4f403b] shadow-soft backdrop-blur-sm md:text-xl">
-            <Sparkles aria-hidden="true" className="mr-2 inline-block text-[#c89b6d]" size={20} strokeWidth={1.6} />
-            Des centaines de possibilités de personnalisation selon votre thème et votre décoration.
+        <div className={`mx-auto mt-12 flex max-w-4xl flex-col items-center text-center transition-all delay-500 duration-700 ${customizationVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}>
+          <div className="w-full rounded-[24px] border border-[#e4cdbb] bg-white/70 px-7 py-6 font-serif text-lg leading-relaxed text-[#4f403b] shadow-[0_14px_36px_rgba(87,62,46,0.08)] backdrop-blur-sm md:px-10 md:py-7 md:text-xl">
+            <Sparkles aria-hidden="true" className="mr-2 inline-block text-[#c89b6d]" size={21} strokeWidth={1.6} />
+            Chaque création est entièrement imaginée selon votre thème, vos couleurs et votre décoration.
           </div>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#ddc8b8] bg-[#f8ebe5]/90 px-5 py-2.5 text-xs font-medium uppercase tracking-[0.12em] text-[#66514a] shadow-sm sm:text-sm">
+          <div className="mt-5 inline-flex items-center gap-2.5 rounded-full border border-[#ddc8b8] bg-[#fffaf4]/90 px-6 py-3 text-xs font-medium uppercase tracking-[0.12em] text-[#66514a] shadow-[0_8px_22px_rgba(87,62,46,0.07)] sm:text-sm">
             <Check aria-hidden="true" size={16} strokeWidth={2} className="text-[#b58a5c]" />
             Maquette personnalisée envoyée avant impression
           </div>
